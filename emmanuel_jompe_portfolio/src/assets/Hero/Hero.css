@@ -1,0 +1,38 @@
+.hero {
+    position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1.0)),
+    url("Hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 1rem 2rem;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+.hero-content .hero-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: rgb(180, 180, 180);
+  font-weight: bold;
+  letter-spacing: 2.5px;
+}
+.hero-content .hero-subtitle {
+    font-size: 1.5rem;
+    padding-left: 10px;
+    color: rgb(180, 180, 180);
+    margin-bottom: 2rem;
+    max-width: 60%;
+    border-left: 5px solid #058789;
+}
+@media (max-width: 768px) {
+    .hero-content .hero-title{
+        font-size: 2rem;
+    }
+    .hero-content .hero-subtitle{
+        max-width: 280px;
+    }
+}

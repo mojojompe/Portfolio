@@ -1,0 +1,124 @@
+/* ===== Navbar ===== */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* updated */
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: large;
+}
+
+.nav-links a,
+.nav-links button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #058789;
+  text-decoration: none;
+}
+
+.cta-btn {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  transform-style: preserve-3d;
+  border-bottom: 3px solid #058789;
+  transform: scaleY(1.2);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.cta-btn.active {
+  color: rgb(202, 217, 255);
+}
+
+.cta-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(202, 217, 255);
+  border-radius: 2px;
+  color: white;
+}
+
+.landing-menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-center {
+    justify-content: flex-start;
+  }
+  .nav-links {
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+
+  .nav-links :hover {
+    color: rgb(255, 255, 255);
+    transform-style: preserve-3d;
+    border-bottom: 2.5px solid #058789;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .landing-menu-toggle {
+    display: inline;
+  }
+}

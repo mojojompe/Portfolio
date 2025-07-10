@@ -1,0 +1,114 @@
+.footer {
+    background-color: #000000;
+    color: rgb(180, 180, 180);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .footer-section h2,
+  .footer-section h3 {
+    color: #058789;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: rgb(93, 93, 93);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 1.5px solid #058789;
+  }
+  
+  .social-icons {
+    padding-top: 5px;
+    display: flex;
+    gap: 22px;
+  }
+  
+  .social-icons a {
+    color: rgb(93, 93, 93);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #f0f0f0;
+    transform: scaleY(1.2);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid rgb(129, 129, 129);
+    padding-top: 10px;
+    width: 100%;
+  }
+  
+  /* Mobile View Adjustments */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin: 20px 0;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  
+  /* Ensure the footer stays at the bottom of the page */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
