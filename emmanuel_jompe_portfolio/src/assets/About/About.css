@@ -36,7 +36,6 @@
     padding: 1rem 2rem;
     text-align: center;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
     border: 1px solid #058789;
     color: rgb(180, 180, 180);
     position: relative;
@@ -103,7 +102,7 @@
         padding: 1rem 2rem;
         text-align: center;
         transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
+        
         border: 1px solid #058789;
         color: rgb(180, 180, 180);
         position: relative;
