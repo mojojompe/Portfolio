@@ -1,9 +1,9 @@
 import React from 'react'
 import './Footer.css'
-import { FaFacebook, FaPhone } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa';
 import { MdWhatsapp } from 'react-icons/md';
 import { FaInstagram, FaLinkedin, FaLocationDot, FaTwitter } from 'react-icons/fa6';
-import { SiGmail } from 'react-icons/si';
+import { SiGithub, SiGmail } from 'react-icons/si';
 
 /*import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";*/
 const Footer = () => {
@@ -45,13 +45,16 @@ const Footer = () => {
           <h3>Socials</h3>
           <div className="social-icons">
             <a href="#">
+              <SiGithub size={40} />
+            </a>
+            <a href="#">
+              <FaLinkedin size={40} />
+            </a>
+            <a href="#">
               <SiGmail size={40} />
             </a>
             <a href="#">
               <MdWhatsapp size={40} />
-            </a>
-            <a href="#">
-              <FaFacebook size={40} />
             </a>
             <a href="#">
               <FaInstagram size={40} />
@@ -59,9 +62,7 @@ const Footer = () => {
             <a href="#">
               <FaTwitter size={40} />
             </a>
-            <a href="#">
-              <FaLinkedin size={40} />
-            </a>
+           
           </div>
         </div>
       </div>

@@ -1,9 +1,8 @@
 import React from 'react'
 import './About.css'
-import { FaChalkboardTeacher, FaTasks } from 'react-icons/fa'
-import { FaClipboardList, FaNetworkWired, FaTerminal, FaWebflow } from 'react-icons/fa6'
+import { FaChalkboardTeacher } from 'react-icons/fa'
+import { FaNetworkWired, FaTerminal } from 'react-icons/fa6'
 import { MdDevices } from 'react-icons/md'
-import { SiJira, SiNotion, SiTrello } from 'react-icons/si'
 const About = () => {
   return (
     <section className="me-about">
