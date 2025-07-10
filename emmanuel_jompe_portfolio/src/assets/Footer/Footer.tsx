@@ -1,4 +1,3 @@
-import React from 'react'
 import './Footer.css'
 import { FaPhone } from 'react-icons/fa';
 import { MdWhatsapp } from 'react-icons/md';

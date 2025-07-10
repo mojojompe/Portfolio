@@ -20,6 +20,9 @@
   font-weight: bold;
   letter-spacing: 2.5px;
 }
+.hero-content .hero-title span {
+  color: #058789;
+}
 .hero-content .hero-subtitle {
     font-size: 1.5rem;
     padding-left: 10px;

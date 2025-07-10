@@ -1,4 +1,3 @@
-import React from 'react'
 import './About.css'
 import { FaChalkboardTeacher } from 'react-icons/fa'
 import { FaNetworkWired, FaTerminal } from 'react-icons/fa6'

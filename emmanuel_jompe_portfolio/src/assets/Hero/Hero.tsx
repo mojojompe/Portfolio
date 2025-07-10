@@ -1,6 +1,4 @@
-import React from 'react'
 import './Hero.css'
-
 const Hero = () => {
   return (
     <>
@@ -12,7 +10,7 @@ const Hero = () => {
         >
           <h1 className="hero-title">
             Hi, I'm{" "}
-            <span style={{ color: "#058789", fontWeight: "bolder" }}>
+            <span>
               Emmanuel
             </span>
           </h1>
