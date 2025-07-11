@@ -8,12 +8,22 @@
     width: 100%;
 }
 .about-head {
-    align-items: flex;
+    align-items: center;
     flex-direction: row;
 }
 .about-us-h2 {
     font-size: 2.5rem;
     color: #058789;
+}
+.frameworks-h2{
+font-size: 2.5rem;
+color: #058789;
+}
+.about-us-h3 {
+    font-size: 1.5rem;
+    color: rgb(180, 180, 180);
+    text-align: center;
+
 }
 .container {
     display: flex;
@@ -21,6 +31,36 @@
     flex-direction: row;
     box-sizing: border-box;
     padding: 1rem 2rem;
+}
+.container-stack {
+    top: 0;
+    display: flex;
+    align-items: stretch;
+    max-width: 80%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    align-items: stretch;
+}
+.container-stack-items {
+    display: flex;
+    max-width: 100%;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+}
+.frameworks-grid {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    gap: 1rem;
 }
 .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -82,6 +122,9 @@
     .about-us-h2 {
         font-size: 2.5rem;
     }
+    .about-us-h3 {
+        font-size: 1.5rem;
+    } 
     .about-head {
         align-items: center;
     }
@@ -89,6 +132,24 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+    .container-stack {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+    .container-stack-items {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 0.5rem 1rem;
+        gap: 1rem;
+        align-items: stretch;
     }
     .services-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -102,7 +163,6 @@
         padding: 1rem 2rem;
         text-align: center;
         transition: all 0.3s ease;
-        
         border: 1px solid #058789;
         color: rgb(180, 180, 180);
         position: relative;
