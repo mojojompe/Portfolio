@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Splash.css";
+
 
 const Splash = () => {
   const text = "Welcome to My Portfolio!!";

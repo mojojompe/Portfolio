@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: space-between; /* updated */
   z-index: 1000;
+  animation: slide-in 1s;
 }
 
 .logo {
@@ -120,5 +121,16 @@
 
   .landing-menu-toggle {
     display: inline;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

@@ -1,0 +1,75 @@
+.heroC {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  animation: slide-in 1s;
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)),
+    url("Hero2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* changed from left to center */
+  padding: 1rem 2rem;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+.contact-form {
+  background: rgba(20, 20, 20, 0.25); /* more transparent */
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(11, 103, 104, 0.15);
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #058789;
+  margin-bottom: 0.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #058789;
+  border-radius: 8px;
+  padding: 0.7rem;
+  font-size: 1rem;
+  background: transparent;
+  color: #ffffff;
+  resize: none;
+}
+
+.contact-form button {
+  background: #058789;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button:hover {
+  background: #04696b;
+}
+@media (max-width: 768px) {
+  .heroC {
+    padding: 1rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-form {
+    width: 100%;
+    max-width: 95vw;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+  }
+}

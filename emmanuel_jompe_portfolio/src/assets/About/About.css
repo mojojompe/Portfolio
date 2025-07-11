@@ -13,7 +13,8 @@
 }
 .about-us-h2 {
     font-size: 2.5rem;
-    color: #058789;
+    color:aliceblue;
+    border-bottom: 2px solid #058789;
 }
 .frameworks-h2{
 font-size: 2.5rem;
@@ -93,6 +94,9 @@ color: #058789;
 .service-card p {
     color: #5c5c5c;
 }
+.service-card a {
+    color: aliceblue;
+}
 
 .service-card::before {
     content: '';
@@ -109,6 +113,9 @@ color: #058789;
 .service-card > * {
     position: relative;
     z-index: 2;
+}
+.service-card img{
+    border-radius: 7px;
 }
 
 .service-card:hover {

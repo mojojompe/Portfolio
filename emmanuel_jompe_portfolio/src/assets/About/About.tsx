@@ -2,8 +2,10 @@ import './About.css'
 import { FaChalkboardTeacher } from 'react-icons/fa'
 import { FaJava, FaLeaf, FaNetworkWired, FaTerminal } from 'react-icons/fa6'
 import { MdDevices } from 'react-icons/md'
-import { SiAmazonwebservices, SiCplusplus, SiCss3, SiDjango, SiDocker, SiExpo, SiExpress, SiFirebase, SiGnubash, SiGooglecloud, SiGooglecloudstorage, SiHtml5, SiJavascript, SiMongodb, SiNativescript, SiNodedotjs, SiPython, SiR, SiReact, SiRedis, SiRedux, SiTypescript } from 'react-icons/si'
+import { SiAmazonwebservices, SiCplusplus, SiCss3, SiDjango, SiDocker, SiExpo, SiExpress, SiFirebase, SiGnubash, SiGooglecloud, SiHtml5, SiJavascript, SiMongodb, SiNativescript, SiNodedotjs, SiPython, SiR, SiReact, SiRedux, SiTypescript } from 'react-icons/si'
+
 const About = () => {
+  
   return (
     <section className="me-about">
       <div className="about-head">
@@ -30,7 +32,7 @@ const About = () => {
               <MdDevices size={40} color="#058789" />
               <h3>Cross-Platform Development</h3>
               <p>
-                Provides Web, Mobile and Desktop Software Platforms. Get Mobile
+                Provides Web, Mobile and Desktop Software development. Builds Mobile
                 Apps, Websites and Portals
               </p>
             </div>
@@ -87,7 +89,6 @@ const About = () => {
             <SiNodedotjs size={50} color="#058789" />
             <SiExpress size={50} color="#058789" />
             <SiMongodb size={50} color="#058789" />
-            <SiRedis size={50} color="#058789" />
             <SiFirebase size={50} color="#058789" />
           </div>
         </div>
@@ -121,7 +122,78 @@ const About = () => {
             <SiGnubash size={50} color="#058789" />
           </div>
         </div>
+      </div>
 
+      <div className="about-head">
+        <h2 className="about-us-h2">Projects</h2>
+      </div>
+
+      <div className="container">
+        <div className="services-grid">
+          <div className="service-card">
+            <div className="service-icon">
+              <img
+                src="/Medicare.png"
+                alt="medicare"
+                height={120}
+                width={230}
+              />
+              <h3>MediCare</h3>
+              <p>
+                Created with TypeScript React, Node.js and MongoDb, Medicare is
+                designed to digitalize and bridge the gap between Healthcare
+                Providers and their patients, simplifying Healthcare delivery.
+              </p>
+              <a href="medicare-five-eosin.vercel.app">view</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="services-grid">
+          <div className="service-card">
+            <div className="service-icon">
+              <img
+                src="/CampusTech.png"
+                alt="campusTech"
+                height={120}
+                width={230}
+              />
+              <h3>Campus Tech Group</h3>
+              <p>
+                Collaborated with a Campus Developers Team and developed the
+                Front-end for a website, Using HTML, CSS and JavaScript, where
+                students can join a community of Developers and Innovators
+              </p>
+              <a href="medicare-five-eosin.vercel.app">view</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="services-grid">
+          <div className="service-card">
+            <div className="service-icon">
+              <img
+                src="/Eduplanner.jpg"
+                alt="eduplanner"
+                height={120}
+                width={230}
+              />
+              <h3>EduPlanner</h3>
+              <p>
+                EduPlanner is a cross-platform mobile application, created with
+                React Native, Node.js and MongoDb, designed to enhance students'
+                academic organisation and productivity, with features that
+                ensures excellence
+              </p>
+              <a href="medicare-five-eosin.vercel.app">view</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div className="about-head">
+        <h2 className="about-us-h2">Contact Me</h2>
       </div>
     </section>
   );

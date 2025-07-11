@@ -2,6 +2,7 @@
     position: relative;
   height: 100vh;
   width: 100%;
+  animation: slide-in 1s;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1.0)),
     url("Hero.jpg");
   background-repeat: no-repeat;
@@ -38,4 +39,16 @@
     .hero-content .hero-subtitle{
         max-width: 280px;
     }
+}
+
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
