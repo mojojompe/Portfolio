@@ -32,8 +32,8 @@ const About = () => {
               <MdDevices size={40} color="#058789" />
               <h3>Cross-Platform Development</h3>
               <p>
-                Provides Web, Mobile and Desktop Software development. Builds Mobile
-                Apps, Websites and Portals
+                Provides Web, Mobile and Desktop Software development. Builds
+                Mobile Apps, Websites and Portals
               </p>
             </div>
           </div>
@@ -144,7 +144,7 @@ const About = () => {
                 designed to digitalize and bridge the gap between Healthcare
                 Providers and their patients, simplifying Healthcare delivery.
               </p>
-              <a href="medicare-five-eosin.vercel.app">view</a>
+              <a href="https://medicare-five-eosin.vercel.app">view</a>
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@ const About = () => {
                 Front-end for a website, Using HTML, CSS and JavaScript, where
                 students can join a community of Developers and Innovators
               </p>
-              <a href="medicare-five-eosin.vercel.app">view</a>
+              <a href="https://group3project-beige.vercel.app">view</a>
             </div>
           </div>
         </div>
@@ -185,12 +185,11 @@ const About = () => {
                 academic organisation and productivity, with features that
                 ensures excellence
               </p>
-              <a href="medicare-five-eosin.vercel.app">view</a>
+              <a href="https://github.com/mojojompe">view</a>
             </div>
           </div>
         </div>
       </div>
-    
 
       <div className="about-head">
         <h2 className="about-us-h2">Contact Me</h2>
