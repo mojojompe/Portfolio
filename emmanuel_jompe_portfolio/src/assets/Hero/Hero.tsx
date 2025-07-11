@@ -1,5 +1,5 @@
 import "./Hero.css";
-import logo from "../assets/Navbar/LogoBlack.png";
+
 
 const Hero = () => {
   return (
@@ -19,7 +19,6 @@ const Hero = () => {
             designing scalable systems and dedicated to contributing immensely
             to the Tech World
           </p>
-          <img src={logo} alt="logo" />
         </div>
       </section>
     </>
