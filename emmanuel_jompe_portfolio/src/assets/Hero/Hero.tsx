@@ -18,6 +18,7 @@ const Hero = () => {
             to the Tech World
           </p>
         </div>
+        
       </section>
     </>
   );

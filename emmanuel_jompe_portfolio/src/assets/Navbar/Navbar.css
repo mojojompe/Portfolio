@@ -94,19 +94,23 @@
     justify-content: flex-start;
   }
   .nav-links {
+    border-radius: 15px;
+    font-style: oblique;
+    font-family: cursive;
     gap: 1.5rem;
-    align-items: center;
-    justify-content: center;
+    align-items: right;
+    justify-content: right;
     display: none;
     flex-direction: column;
-    background: transparent;
+    background-color: black;
     position: absolute;
     top: 70px;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 40%;
     padding: 1rem 2rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    margin-right: 3%;
   }
 
   .nav-links :hover {

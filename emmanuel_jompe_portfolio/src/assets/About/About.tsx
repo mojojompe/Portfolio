@@ -190,10 +190,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      <div className="about-head">
-        <h2 className="about-us-h2">Contact Me</h2>
-      </div>
     </section>
   );
 }

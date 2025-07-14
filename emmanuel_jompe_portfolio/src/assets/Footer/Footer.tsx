@@ -1,8 +1,13 @@
-import './Footer.css'
-import { FaPhone } from 'react-icons/fa';
-import { MdWhatsapp } from 'react-icons/md';
-import { FaInstagram, FaLinkedin, FaLocationDot, FaTwitter } from 'react-icons/fa6';
-import { SiGithub, SiGmail } from 'react-icons/si';
+import "./Footer.css";
+import { FaPhone } from "react-icons/fa";
+import { MdWhatsapp } from "react-icons/md";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaLocationDot,
+  FaTwitter,
+} from "react-icons/fa6";
+import { SiGithub, SiGmail } from "react-icons/si";
 
 /*import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";*/
 const Footer = () => {
@@ -38,18 +43,26 @@ const Footer = () => {
             <li>
               <a href="/Contact.tsx">Contact</a>
             </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1wo3hSGebGm-vAe1Jue4WsoawoGf906q5/view?usp=drivesdk"
+                download={"Jompe_Emmanuel_Resume"}
+              >
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
         <div className="footer-section social">
           <h3>Socials</h3>
           <div className="social-icons">
-            <a href="#">
+            <a href="https://github.com/mojojompe">
               <SiGithub size={40} />
             </a>
-            <a href="#">
+            <a href="http://www.linkedin.com/in/emmanuel-jompe">
               <FaLinkedin size={40} />
             </a>
-            <a href="#">
+            <a href="mailto:">
               <SiGmail size={40} />
             </a>
             <a href="#">
@@ -61,7 +74,6 @@ const Footer = () => {
             <a href="#">
               <FaTwitter size={40} />
             </a>
-           
           </div>
         </div>
       </div>
@@ -70,6 +82,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

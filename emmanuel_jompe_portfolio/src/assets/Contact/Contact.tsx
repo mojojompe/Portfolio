@@ -7,6 +7,10 @@ const Contact = () => {
         data-aos="fade-down"
         data-aos-duration="1500"
       >
+     <div className="about-head">
+     <h2 className="about-us-h2">Contact Me</h2>
+     </div>
+        
         <form className="contact-form">
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" required />
