@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa6";
 import { SiGithub, SiGmail } from "react-icons/si";
 
-/*import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";*/
 const Footer = () => {
   return (
     <footer className="footer">
@@ -65,13 +64,13 @@ const Footer = () => {
             <a href="mailto:">
               <SiGmail size={40} />
             </a>
-            <a href="#">
+            <a href="https://wa.me/2348071455374">
               <MdWhatsapp size={40} />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/emmanuel_jompe/">
               <FaInstagram size={40} />
             </a>
-            <a href="#">
+            <a href="https://twitter.com">
               <FaTwitter size={40} />
             </a>
           </div>
