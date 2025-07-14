@@ -70,7 +70,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/emmanuel_jompe/">
               <FaInstagram size={40} />
             </a>
-            <a href="https://twitter.com">
+            <a href="https://twitter.com/EmmanuelJompe">
               <FaTwitter size={40} />
             </a>
           </div>
