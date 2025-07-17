@@ -54,7 +54,7 @@ const Contact = () => {
 
           <button type="submit">Send</button>
         </form>
-        {status && <p className="status-message">{status}</p>}
+        {status && <p style={{ color: '#058789' }} className="status-message">{status}</p>}
       </div>
     </section>
   );
