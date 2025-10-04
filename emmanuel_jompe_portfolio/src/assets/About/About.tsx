@@ -144,7 +144,7 @@ const About = () => {
                 designed to digitalize and bridge the gap between Healthcare
                 Providers and their patients, simplifying Healthcare delivery.
               </p>
-              <a href="https://medicare-five-eosin.vercel.app">view</a>
+              <a href="https://medicare-home.vercel.app">view</a>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ const About = () => {
                 academic organisation and productivity, with features that
                 ensures excellence
               </p>
-              <a href="https://github.com/mojojompe">view</a>
+              <a href="https://edu-planner-home.vercel.app">view</a>
             </div>
           </div>
         </div>
