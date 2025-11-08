@@ -24,7 +24,7 @@ const Contact = () => {
 
     emailjs.send('service_kdyz2m3', 'template_b9h31sv', templateParams, 'aKHyakSq_ls-cZQ9-')
       .then(() => {
-        setStatus('Email sent successfully!');
+        setStatus('Mail sent successfully!');
         setEmail('');
       })
       .catch(() => {
