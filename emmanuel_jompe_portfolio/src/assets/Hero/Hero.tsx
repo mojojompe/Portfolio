@@ -14,7 +14,7 @@ const Hero = () => {
           <h1 className="hero-name">
             Emmanuel <strong>Jompe</strong>
           </h1>
-          <h2 className="hero-role">Software Engineer</h2>
+          <h2 className="hero-role">Software Engineer.</h2>
 
           <p className="hero-blurb">
             I am a Software Engineer with extensive experience with development
