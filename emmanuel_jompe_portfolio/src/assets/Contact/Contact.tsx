@@ -1,9 +1,10 @@
 import "./Contact.css";
 import { useState } from "react";
-import emailjs from '@emailjs/browser'
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('');
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,39 +23,71 @@ const Contact = () => {
       `,
     };
 
-    emailjs.send('service_kdyz2m3', 'template_b9h31sv', templateParams, 'aKHyakSq_ls-cZQ9-')
+    emailjs
+      .send(
+        "service_kdyz2m3",
+        "template_b9h31sv",
+        templateParams,
+        "aKHyakSq_ls-cZQ9-"
+      )
       .then(() => {
-        setStatus('Email sent successfully!');
-        setEmail('');
+        setStatus("Email sent successfully!");
+        setEmail("");
       })
       .catch(() => {
-        setStatus('Failed to send email. Please try again later.');
+        setStatus("Failed to send email. Please try again later.");
       });
   };
   return (
-    <section className="heroC">
+    <section id="contact" className="contact-section">
       <div
-        className="hero-content"
-        data-aos="fade-down"
-        data-aos-duration="1500"
+        className="contact-inner"
+        data-aos="fade-up"
+        data-aos-duration="1200"
       >
-     <div className="about-head">
-     <h2 className="about-us-h2">Contact Me</h2>
-     </div>
-        
+        <div className="contact-left">
+          <h2 className="contact-title">Contact Me</h2>
+          <p className="contact-lead">
+            Want to work together or have a question? Drop a message and I'll
+            get back to you as soon as I can.
+          </p>
+
+          <div className="contact-info">
+            <div>
+              <strong>Email</strong>
+              <div>hello@emmanueljompe.dev</div>
+            </div>
+            <div>
+              <strong>Location</strong>
+              <div>Lagos, Nigeria</div>
+            </div>
+          </div>
+        </div>
+
         <form className="contact-form" onSubmit={sendEmail}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Enter your Name" required />
+          <label htmlFor="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" required />
 
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Enter your Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            required
+          />
 
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Message</label>
           <textarea id="message" name="message" rows={5} required />
 
-          <button type="submit">Send</button>
+          <button className="send-btn" type="submit">
+            Send message
+          </button>
+
+          {status && <div className="status">{status}</div>}
         </form>
-        {status && <p style={{ color: '#058789' }} className="status-message">{status}</p>}
       </div>
     </section>
   );

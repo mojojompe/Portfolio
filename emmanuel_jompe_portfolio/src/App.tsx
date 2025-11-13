@@ -5,7 +5,7 @@ import Navbar from "./assets/Navbar/Navbar";
 import Contact from "./assets/Contact/Contact";
 import About from "./assets/About/About";
 
-const App: React.FC = () => {
+function App() {
   return (
     <>
       <Navbar />
@@ -15,6 +15,6 @@ const App: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default App;

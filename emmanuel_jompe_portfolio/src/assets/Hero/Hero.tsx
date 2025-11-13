@@ -1,26 +1,45 @@
 import "./Hero.css";
+
 const Hero = () => {
   return (
-    <>
-      <section className="hero">
+    <header id="hero" className="site-hero">
+      <div className="hero-inner">
         <div
           className="hero-content"
           data-aos="fade-down"
-          data-aos-duration="1500"
+          data-aos-duration="1000"
         >
-          <h1 className="hero-title">
-            Hi, I'm <span>Emmanuel</span>
+          <span className="eyebrow">Hey, I'm</span>
+
+          <h1 className="hero-name">
+            Emmanuel <strong>Jompe</strong>
           </h1>
-          <p className="hero-subtitle">
-            I am a Software Engineer with a extensive experience with
-            development tools and a passion for creating innovative solutions,
-            designing scalable systems and dedicated to contributing immensely
-            to the Tech World
+          <h2 className="hero-role">Software Engineer</h2>
+
+          <p className="hero-blurb">
+            I am a Software Engineer with extensive experience with development
+            tools and a passion for creating innovative solutions, designing
+            scalable systems, and contributing immensely to the tech world.
           </p>
+
+          <div className="hero-actions">
+            <a className="cta" href="#projects">
+              See Projects
+            </a>
+            <a className="cta ghost" href="#about">
+              About Me
+            </a>
+          </div>
+
+          <div className="tech-inline">
+            <span className="tech-pill">TypeScript</span>
+            <span className="tech-pill">React</span>
+            <span className="tech-pill">Next.js</span>
+            <span className="tech-pill">MongoDB</span>
+          </div>
         </div>
-        
-      </section>
-    </>
+      </div>
+    </header>
   );
 };
 
