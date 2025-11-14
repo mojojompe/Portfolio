@@ -71,65 +71,65 @@ const About = () => {
             </article>
           </div>
         </div>
+      </div>
 
-        <aside className="about-right">
-          <h2 className="section-title small">My Tech Stack</h2>
+      <aside className="about-right">
+        <h2 className="section-title">My Tech Stack</h2>
 
-          <div className="stack-grid">
-            <div className="stack-col">
-              <h4>Frontend</h4>
-              <div className="icons">
-                <SiHtml5 size={32} color="#058789" />
-                <SiCss3 size={32} color="#058789" />
-                <SiJavascript size={32} color="#058789" />
-                <SiTypescript size={32} color="#058789" />
-              </div>
-            </div>
-
-            <div className="stack-col">
-              <h4>Backend</h4>
-              <div className="icons">
-                <SiDjango size={32} color="#058789" />
-                <FaLeaf size={32} color="#058789" />
-                <SiNodedotjs size={32} color="#058789" />
-                <SiExpress size={32} color="#058789" />
-                <SiMongodb size={32} color="#058789" />
-                <SiFirebase size={32} color="#058789" />
-              </div>
-            </div>
-
-            <div className="stack-col">
-              <h4>Languages</h4>
-              <div className="icons">
-                <FaJava size={32} color="#058789" />
-                <SiPython size={32} color="#058789" />
-                <SiCplusplus size={32} color="#058789" />
-                <SiR size={32} color="#058789" />
-              </div>
-            </div>
-
-            <div className="stack-col">
-              <h4>Frameworks</h4>
-              <div className="icons">
-                <SiReact size={32} color="#058789" />
-                <SiRedux size={32} color="#058789" />
-                <SiExpo size={32} color="#058789" />
-                <SiNativescript size={32} color="#058789" />
-              </div>
-            </div>
-
-            <div className="stack-col">
-              <h4>Dev-Ops</h4>
-              <div className="icons">
-                <SiAmazonwebservices size={32} color="#058789" />
-                <SiDocker size={32} color="#058789" />
-                <SiGooglecloud size={32} color="#058789" />
-                <SiGnubash size={32} color="#058789" />
-              </div>
+        <div className="stack-grid">
+          <div className="stack-col">
+            <h4>Frontend</h4>
+            <div className="icons">
+              <SiHtml5 size={45} color="#058789" />
+              <SiCss3 size={45} color="#058789" />
+              <SiJavascript size={45} color="#058789" />
+              <SiTypescript size={45} color="#058789" />
             </div>
           </div>
-        </aside>
-      </div>
+
+          <div className="stack-col">
+            <h4>Backend</h4>
+            <div className="icons">
+              <SiDjango size={45} color="#058789" />
+              <FaLeaf size={45} color="#058789" />
+              <SiNodedotjs size={45} color="#058789" />
+              <SiExpress size={45} color="#058789" />
+              <SiMongodb size={45} color="#058789" />
+              <SiFirebase size={45} color="#058789" />
+            </div>
+          </div>
+
+          <div className="stack-col">
+            <h4>Languages</h4>
+            <div className="icons">
+              <FaJava size={45} color="#058789" />
+              <SiPython size={45} color="#058789" />
+              <SiCplusplus size={45} color="#058789" />
+              <SiR size={45} color="#058789" />
+            </div>
+          </div>
+
+          <div className="stack-col">
+            <h4>Frameworks</h4>
+            <div className="icons">
+              <SiReact size={45} color="#058789" />
+              <SiRedux size={45} color="#058789" />
+              <SiExpo size={45} color="#058789" />
+              <SiNativescript size={45} color="#058789" />
+            </div>
+          </div>
+
+          <div className="stack-col">
+            <h4>Dev-Ops</h4>
+            <div className="icons">
+              <SiAmazonwebservices size={45} color="#058789" />
+              <SiDocker size={45} color="#058789" />
+              <SiGooglecloud size={45} color="#058789" />
+              <SiGnubash size={45} color="#058789" />
+            </div>
+          </div>
+        </div>
+      </aside>
 
       {/* Projects Section */}
       <div className="projects-section" id="projects">
@@ -143,7 +143,12 @@ const About = () => {
           <div className="proj-card">
             <small className="proj-tag">OutbreakIQ</small>
             <h3>Disease Prediction Dashboard</h3>
-            <p>From Numpy, Tensorflow for ML training, to Next.js for Visualization, OutbreakIQ is an AI powered health Intelligence system that tracks, monitors and predicts disease outbreaks across Nigeria.</p>
+            <p>
+              From Numpy, Tensorflow for ML training, to Next.js for
+              Visualization, OutbreakIQ is an AI powered health Intelligence
+              system that tracks, monitors and predicts disease outbreaks across
+              Nigeria.
+            </p>
             <a href="" className="proj-link">
               View Project →
             </a>
@@ -159,7 +164,9 @@ const About = () => {
             <small className="proj-tag">Goftem Stores</small>
             <h3>E Commerce Website | Freelance</h3>
             <p>
-              Built with Next.js, MongoDB, Express.js and Node.js, the Website allows users to browse products, make payments and also track orders.
+              Built with Next.js, MongoDB, Express.js and Node.js, the Website
+              allows users to browse products, make payments and also track
+              orders.
             </p>
             <a href="https://goftemstores.vercel.app" className="proj-link">
               View Project →

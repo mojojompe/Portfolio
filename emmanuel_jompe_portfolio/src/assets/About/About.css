@@ -17,20 +17,20 @@
 /* layout */
 .about-wrap{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2.5rem;
-  align-items: start;
+  align-items: center;
 }
 
 /* left column */
 .section-title{
   font-size: 2.25rem;
   color: #0f1723;
-  margin: 0 0 1rem 0;
+  margin: 3rem 0 1rem 0;
   border-bottom: 3px solid rgba(5,135,137,0.09);
   padding-bottom: .4rem;
 }
-.section-title.small{ font-size:1.25rem; margin-top:0; border:none; color:var(--muted); }
+.section-title.small{ font-size:2.25rem; margin-top:0; border:none; color:var(--muted); }
 
 .lead{
   color: #656f76;
@@ -66,23 +66,24 @@
 /* right column - tech stack */
 .about-right{
   background: transparent;
-  padding:0.4rem 0;
-  align-items: center;
-  justify-content: center;
+  padding-top: 2rem;
 }
-.stack-grid{
+.stack-col{
   display:flex;
-  flex-direction:column;
+  flex-direction: column;
+  align-items: center;
   gap:1rem;
 }
 .stack-col h4{
-  margin:0 0 0.5rem 0;
+  align-items: center;
+  justify-content: center;
   color:#0f1723;
-  font-size:1rem;
+  font-size: 1.7rem;
 }
 .icons{
   display:flex;
-  gap:0.8rem;
+  gap: 1rem;
+
   flex-wrap:wrap;
 }
 

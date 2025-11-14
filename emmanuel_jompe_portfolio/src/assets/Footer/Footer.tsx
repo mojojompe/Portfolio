@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="social-row">
             <a href="https://github.com/mojojompe"><SiGithub /></a>
             <a href="http://www.linkedin.com/in/emmanuel-jompe"><FaLinkedin /></a>
-            <a href="mailto:"><SiGmail /></a>
+            <a href="mailto: ayomiposiemmanuel(@gmail.com"><SiGmail /></a>
             <a href="https://wa.me/2348071455374"><MdWhatsapp /></a>
             <a href="https://www.instagram.com/emmanuel_jompe/"><FaInstagram /></a>
             <a href="https://twitter.com/EmmanuelJompe"><FaTwitter /></a>

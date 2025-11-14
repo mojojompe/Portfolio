@@ -82,8 +82,9 @@
 
 .footer-links a:hover {
   color: var(--accent);
+  transform: translateY(-2px);
   font-weight: 600;
-  margin-bottom: 1px solid #058789;
+  border-bottom: 2px solid #058789;
 }
 
 /* Social Icons */
