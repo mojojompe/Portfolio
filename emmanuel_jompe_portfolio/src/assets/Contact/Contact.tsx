@@ -31,13 +31,8 @@ const Contact = () => {
         "aKHyakSq_ls-cZQ9-"
       )
       .then(() => {
-<<<<<<< HEAD
         setStatus("Email sent successfully!");
         setEmail("");
-=======
-        setStatus('Mail sent successfully!');
-        setEmail('');
->>>>>>> 1f1183c07c482f67299f601884aef49dc5929810
       })
       .catch(() => {
         setStatus("Failed to send email. Please try again later.");

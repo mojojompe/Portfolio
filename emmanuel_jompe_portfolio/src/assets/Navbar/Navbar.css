@@ -52,6 +52,7 @@
 }
 .nav-links li a:hover {
   color:var(--accent);
+  border-bottom: 2px solid #058789;
 }
 
 /* Resume Button */

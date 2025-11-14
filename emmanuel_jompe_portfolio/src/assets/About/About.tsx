@@ -119,7 +119,7 @@ const About = () => {
             </div>
 
             <div className="stack-col">
-              <h4>DevOps</h4>
+              <h4>Dev-Ops</h4>
               <div className="icons">
                 <SiAmazonwebservices size={32} color="#058789" />
                 <SiDocker size={32} color="#058789" />
@@ -134,6 +134,39 @@ const About = () => {
       {/* Projects Section */}
       <div className="projects-section" id="projects">
         <h2 className="section-title">Projects</h2>
+
+        {/* OutbreakIQ */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/OutbreakIQ.png" alt="Outbreakiq" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">OutbreakIQ</small>
+            <h3>Disease Prediction Dashboard</h3>
+            <p></p>
+            <a href="" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        {/* Goftem Stores */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/Goftem.png" alt="campusTech" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">Goftem Stores</small>
+            <h3>E Commerce Website</h3>
+            <p>
+              Built the frontend of a student collaboration portal using HTML,
+              CSS and JavaScript.
+            </p>
+            <a href="https://goftemstores.vercel.app" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
 
         {/* Medicare */}
         <div className="projects-grid">
@@ -156,6 +189,9 @@ const About = () => {
 
         {/* Campus Tech */}
         <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/CampusTech.png" alt="campusTech" />
+          </div>
           <div className="proj-card">
             <small className="proj-tag">Campus Tech Group</small>
             <h3>Community platform</h3>
@@ -170,9 +206,6 @@ const About = () => {
               View Project →
             </a>
           </div>
-          <div className="proj-media">
-            <img src="/CampusTech.png" alt="campusTech" />
-          </div>
         </div>
 
         {/* Eduplanner */}
@@ -184,8 +217,9 @@ const About = () => {
             <small className="proj-tag">EduPlanner</small>
             <h3>Student productivity app</h3>
             <p>
-              A cross-platform mobile app built with React Native, Node.js and
-              MongoDB to help students organize tasks and boost productivity.
+              A Web App and cross-platform mobile app built with React Native,
+              Node.js and MongoDB to help students organize tasks and boost
+              productivity.
             </p>
             <a href="https://edu-planner-home.vercel.app" className="proj-link">
               View Project →

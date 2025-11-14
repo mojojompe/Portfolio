@@ -32,10 +32,10 @@ const Hero = () => {
           </div>
 
           <div className="tech-inline">
-            <span className="tech-pill">TypeScript</span>
-            <span className="tech-pill">React</span>
-            <span className="tech-pill">Next.js</span>
-            <span className="tech-pill">MongoDB</span>
+            <span className="tech-pill">Full-Stack Developer</span>
+            <span className="tech-pill">Mobile Developer</span>
+            <span className="tech-pill">ML and AI Engineer</span>
+            <span className="tech-pill">Cyber Security Specialist</span>
           </div>
         </div>
       </div>

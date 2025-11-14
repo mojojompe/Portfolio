@@ -3,7 +3,7 @@
   --bg: #ffffff;
   --muted: #6f7780;
   --card: #f7f9fa;
-  --glass: rgba(5,135,137,0.06);
+  --glass: rgba(137, 5, 40, 0.06);
   --shadow: 0 12px 30px rgba(3,32,40,0.06);
   font-family: Inter, "Segoe UI", Roboto, sans-serif;
 }
@@ -101,15 +101,18 @@
   box-shadow:var(--shadow);
 }
 .cta.ghost{
-  background:transparent;
+  background: white;
   border:1.5px solid var(--accent);
   color:var(--accent);
 }
-
+.cta.ghost :hover{
+  background: #058789;
+}
 /* Tech Pills */
 .tech-inline{
   margin-top:1.5rem;
   display:flex;
+  flex-direction: row;
   gap:0.8rem;
 }
 .tech-pill{
@@ -127,4 +130,7 @@
   .hero-role{ font-size:1.8rem; }
   .hero-blurb{ max-width:100%; }
   .left-social{ display:none; }
+  .tech-inline{
+    flex-direction: column;
+  }
 }
