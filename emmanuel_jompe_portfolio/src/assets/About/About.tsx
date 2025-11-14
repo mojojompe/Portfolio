@@ -143,7 +143,7 @@ const About = () => {
           <div className="proj-card">
             <small className="proj-tag">OutbreakIQ</small>
             <h3>Disease Prediction Dashboard</h3>
-            <p></p>
+            <p>From Numpy, Tensorflow for ML training, to Next.js for Visualization, OutbreakIQ is an AI powered health Intelligence system that tracks, monitors and predicts disease outbreaks across Nigeria.</p>
             <a href="" className="proj-link">
               View Project →
             </a>
@@ -157,10 +157,9 @@ const About = () => {
           </div>
           <div className="proj-card">
             <small className="proj-tag">Goftem Stores</small>
-            <h3>E Commerce Website</h3>
+            <h3>E Commerce Website | Freelance</h3>
             <p>
-              Built the frontend of a student collaboration portal using HTML,
-              CSS and JavaScript.
+              Built with Next.js, MongoDB, Express.js and Node.js, the Website allows users to browse products, make payments and also track orders.
             </p>
             <a href="https://goftemstores.vercel.app" className="proj-link">
               View Project →
