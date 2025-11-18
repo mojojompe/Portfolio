@@ -206,7 +206,7 @@ const About = () => {
               CSS and JavaScript.
             </p>
             <a
-              href="https://group3project-beige.vercel.app"
+              href="https://campus-tech-group.vercel.app/"
               className="proj-link"
             >
               View Project →
