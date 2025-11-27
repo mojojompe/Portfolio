@@ -135,6 +135,47 @@ const About = () => {
       <div className="projects-section" id="projects">
         <h2 className="section-title">Projects</h2>
 
+        {/* Safe Route Ai */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/SafeRoute.png" alt="Safe Route" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">Safe Route Ai</small>
+            <h3>Ai powered Navigation Application</h3>
+            <p>
+              Built with React, Nodejs and Raindrop Ai Apis, Safe Route Ai helps
+              users choose safer walking and driving routes by scoring paths
+              based on risk, environment, and real time indicators. Before a
+              user starts a journey, the app shows multiple route options with
+              safety scores, reasons for the score, and safer alternatives.
+            </p>
+            <a href="" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        {/* Finalytics */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/Finalytics.png" alt="finalytics" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">Finalytics</small>
+            <h3>Stock Market Analysis Dashboard</h3>
+            <p>
+              Real time market visualisation and Ai powered visualizations and
+              Ai powered price predictions using LSTM neural networks.
+              Integrated multiple financial data APIs and built an interactive
+              dashboard with real time updates and dynamic charts
+            </p>
+            <a href="" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
         {/* OutbreakIQ */}
         <div className="projects-grid reverse">
           <div className="proj-media">
