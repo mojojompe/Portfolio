@@ -80,52 +80,52 @@ const About = () => {
           <div className="stack-col">
             <h4>Frontend</h4>
             <div className="icons">
-              <SiHtml5 size={45} color="#058789" />
-              <SiCss3 size={45} color="#058789" />
-              <SiJavascript size={45} color="#058789" />
-              <SiTypescript size={45} color="#058789" />
+              <SiHtml5 size={40} color="#058789" />
+              <SiCss3 size={40} color="#058789" />
+              <SiJavascript size={40} color="#058789" />
+              <SiTypescript size={40} color="#058789" />
             </div>
           </div>
 
           <div className="stack-col">
             <h4>Backend</h4>
             <div className="icons">
-              <SiDjango size={45} color="#058789" />
-              <FaLeaf size={45} color="#058789" />
-              <SiNodedotjs size={45} color="#058789" />
-              <SiExpress size={45} color="#058789" />
-              <SiMongodb size={45} color="#058789" />
-              <SiFirebase size={45} color="#058789" />
+              <SiDjango size={40} color="#058789" />
+              <FaLeaf size={40} color="#058789" />
+              <SiNodedotjs size={40} color="#058789" />
+              <SiExpress size={40} color="#058789" />
+              <SiMongodb size={40} color="#058789" />
+              <SiFirebase size={40} color="#058789" />
             </div>
           </div>
 
           <div className="stack-col">
             <h4>Languages</h4>
             <div className="icons">
-              <FaJava size={45} color="#058789" />
-              <SiPython size={45} color="#058789" />
-              <SiCplusplus size={45} color="#058789" />
-              <SiR size={45} color="#058789" />
+              <FaJava size={40} color="#058789" />
+              <SiPython size={40} color="#058789" />
+              <SiCplusplus size={40} color="#058789" />
+              <SiR size={40} color="#058789" />
             </div>
           </div>
 
           <div className="stack-col">
             <h4>Frameworks</h4>
             <div className="icons">
-              <SiReact size={45} color="#058789" />
-              <SiRedux size={45} color="#058789" />
-              <SiExpo size={45} color="#058789" />
-              <SiNativescript size={45} color="#058789" />
+              <SiReact size={40} color="#058789" />
+              <SiRedux size={40} color="#058789" />
+              <SiExpo size={40} color="#058789" />
+              <SiNativescript size={40} color="#058789" />
             </div>
           </div>
 
           <div className="stack-col">
             <h4>Dev-Ops</h4>
             <div className="icons">
-              <SiAmazonwebservices size={45} color="#058789" />
-              <SiDocker size={45} color="#058789" />
-              <SiGooglecloud size={45} color="#058789" />
-              <SiGnubash size={45} color="#058789" />
+              <SiAmazonwebservices size={40} color="#058789" />
+              <SiDocker size={40} color="#058789" />
+              <SiGooglecloud size={40} color="#058789" />
+              <SiGnubash size={40} color="#058789" />
             </div>
           </div>
         </div>
