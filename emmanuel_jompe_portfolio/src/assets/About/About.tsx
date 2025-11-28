@@ -170,7 +170,7 @@ const About = () => {
               Integrated multiple financial data APIs and built an interactive
               dashboard with real time updates and dynamic charts
             </p>
-            <a href="" className="proj-link">
+            <a href="https://market-finalytics.vercel.app" className="proj-link">
               View Project →
             </a>
           </div>
