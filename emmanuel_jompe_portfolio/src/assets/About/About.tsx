@@ -150,7 +150,7 @@ const About = () => {
               user starts a journey, the app shows multiple route options with
               safety scores, reasons for the score, and safer alternatives.
             </p>
-            <a href="" className="proj-link">
+            <a href="https://safe-route-ai.vercel.app" className="proj-link">
               View Project →
             </a>
           </div>
