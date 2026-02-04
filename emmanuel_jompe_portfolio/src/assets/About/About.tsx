@@ -1,6 +1,6 @@
 import "./About.css";
 import { FaChalkboardTeacher } from "react-icons/fa";
-import { FaJava, FaLeaf, FaNetworkWired, FaTerminal } from "react-icons/fa6";
+import { FaNetworkWired, FaTerminal, FaCode } from "react-icons/fa6";
 import { MdDevices } from "react-icons/md";
 import {
   SiAmazonwebservices,
@@ -26,359 +26,135 @@ import {
 } from "react-icons/si";
 
 const About = () => {
+  const techStack = {
+    frontend: [
+      { name: "HTML5", icon: SiHtml5 },
+      { name: "CSS3", icon: SiCss3 },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "TypeScript", icon: SiTypescript },
+    ],
+    backend: [
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Express", icon: SiExpress },
+      { name: "Django", icon: SiDjango },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "Firebase", icon: SiFirebase },
+    ],
+    languages: [
+      { name: "Python", icon: SiPython },
+      { name: "Java", icon: FaCode },
+      { name: "C++", icon: SiCplusplus },
+      { name: "R", icon: SiR },
+    ],
+    frameworks: [
+      { name: "React", icon: SiReact },
+      { name: "Redux", icon: SiRedux },
+      { name: "Expo", icon: SiExpo },
+      { name: "NativeScript", icon: SiNativescript },
+    ],
+    devops: [
+      { name: "AWS", icon: SiAmazonwebservices },
+      { name: "Docker", icon: SiDocker },
+      { name: "GCP", icon: SiGooglecloud },
+      { name: "Bash", icon: SiGnubash },
+    ]
+  };
+
+  const allIcons = Object.values(techStack).flat();
+
   return (
     <section id="about" className="me-about">
-      <div className="about-wrap">
-        <div className="about-left">
+      <div className="section-container">
+
+        {/* Services / Overview */}
+        <div className="about-intro">
           <h2 className="section-title">Overview</h2>
-          <p className="lead">
+          <p className="lead-text">
             I build modern, reliable web and mobile applications — bridging
             design and functionality. I deliver end-to-end solutions: polished
             front-ends, robust backends, and scalable systems.
           </p>
 
-          <div className="service-grid">
-            <article className="feature">
-              <FaTerminal size={36} color="#058789" />
-              <div>
-                <h3>Software Engineering</h3>
-                <p>Creation and management of modern software systems.</p>
-              </div>
+          <div className="services-grid">
+            <article className="service-card glass-card">
+              <FaTerminal size={32} className="service-icon" />
+              <h3>Software Engineering</h3>
+              <p>Creation and management of modern software systems using robust architecture.</p>
             </article>
 
-            <article className="feature">
-              <MdDevices size={36} color="#058789" />
-              <div>
-                <h3>Cross-Platform Development</h3>
-                <p>Web, mobile and desktop apps with great UX.</p>
-              </div>
+            <article className="service-card glass-card">
+              <MdDevices size={32} className="service-icon" />
+              <h3>Cross-Platform Dev</h3>
+              <p>Seamless web, mobile, and desktop applications with intuitive UX.</p>
             </article>
 
-            <article className="feature">
-              <FaNetworkWired size={36} color="#058789" />
-              <div>
-                <h3>Networking & Security</h3>
-                <p>Setup, monitoring & vulnerability management.</p>
-              </div>
+            <article className="service-card glass-card">
+              <FaNetworkWired size={32} className="service-icon" />
+              <h3>Networking & Security</h3>
+              <p>Setup, monitoring, and vulnerability management ensuring system safety.</p>
             </article>
 
-            <article className="feature">
-              <FaChalkboardTeacher size={36} color="#058789" />
-              <div>
-                <h3>Tutoring</h3>
-                <p>Personalized software development training.</p>
-              </div>
+            <article className="service-card glass-card">
+              <FaChalkboardTeacher size={32} className="service-icon" />
+              <h3>Mentorship</h3>
+              <p>Personalized software development training and technical guidance.</p>
             </article>
           </div>
         </div>
-      </div>
 
-      <aside className="about-right">
-        <h2 className="section-title">My Tech Stack</h2>
+        {/* Tech Stack - Marquee & Code Snippets */}
+        <div className="tech-stack-section">
+          <h2 className="section-title">My Tech Stack</h2>
 
-        <div className="stack-grid">
-          <div className="stack-col">
-            <h4>Frontend</h4>
-            <div className="icons">
-              <SiHtml5 size={40} color="#058789" />
-              <SiCss3 size={40} color="#058789" />
-              <SiJavascript size={40} color="#058789" />
-              <SiTypescript size={40} color="#058789" />
+          {/* Infinite Marquee */}
+          <div className="marquee-container">
+            <div className="marquee-content">
+              {allIcons.map((tech, i) => (
+                <div key={i} className="marquee-item">
+                  <tech.icon size={40} />
+                </div>
+              ))}
+              {allIcons.map((tech, i) => (
+                <div key={`dup-${i}`} className="marquee-item">
+                  <tech.icon size={40} />
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="stack-col">
-            <h4>Backend</h4>
-            <div className="icons">
-              <SiDjango size={40} color="#058789" />
-              <FaLeaf size={40} color="#058789" />
-              <SiNodedotjs size={40} color="#058789" />
-              <SiExpress size={40} color="#058789" />
-              <SiMongodb size={40} color="#058789" />
-              <SiFirebase size={40} color="#058789" />
-            </div>
-          </div>
-
-          <div className="stack-col">
-            <h4>Languages</h4>
-            <div className="icons">
-              <FaJava size={40} color="#058789" />
-              <SiPython size={40} color="#058789" />
-              <SiCplusplus size={40} color="#058789" />
-              <SiR size={40} color="#058789" />
-            </div>
-          </div>
-
-          <div className="stack-col">
-            <h4>Frameworks</h4>
-            <div className="icons">
-              <SiReact size={40} color="#058789" />
-              <SiRedux size={40} color="#058789" />
-              <SiExpo size={40} color="#058789" />
-              <SiNativescript size={40} color="#058789" />
-            </div>
-          </div>
-
-          <div className="stack-col">
-            <h4>Dev-Ops</h4>
-            <div className="icons">
-              <SiAmazonwebservices size={40} color="#058789" />
-              <SiDocker size={40} color="#058789" />
-              <SiGooglecloud size={40} color="#058789" />
-              <SiGnubash size={40} color="#058789" />
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      {/* Projects Section */}
-      <div className="projects-section" id="projects">
-        <h2 className="section-title">Projects</h2>
-
-        {/* Character Recognition Model */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/Character Recognition Code.png" alt="Character Model" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">Handwritten Character Recognition Model</small>
-            <h3>A Machine Learning Model</h3>
-            <p>
-              A deep learning project for recognizing handwritten characters from images using Convolutional Neural Networks (CNNs).
-            </p>
-            <a href="https://github.com/mojojompe/" className="proj-link">
-              View Project →
-            </a>
+          <div className="code-snippets-grid">
+            <CodeSnippet title="Frontend.ts" items={techStack.frontend} color="#3b82f6" />
+            <CodeSnippet title="Backend.js" items={techStack.backend} color="#22c55e" />
+            <CodeSnippet title="Languages.cpp" items={techStack.languages} color="#eab308" />
+            <CodeSnippet title="DevOps.sh" items={techStack.devops} color="#f97316" />
           </div>
         </div>
 
-        {/* Disease Prediction Model */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/Disease Prediction Code.png" alt="Disease Model" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">Disease Prediction Model</small>
-            <h3>A Machine Learning Model</h3>
-            <p>
-              A disease prediction system utilizing ensemble learning techniques.
-            </p>
-            <a href="https://github.com/mojojompe/" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* Credit Scoring Model */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/Credit Scoring Code.png" alt="Credit Model" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">Credit Scoring Model</small>
-            <h3>A Machine Learning Model</h3>
-            <p>
-              A machine learning model designed to predict creditworthiness based on applicant data.
-            </p>
-            <a href="https://github.com/mojojompe/" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* Python Chatbot */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/Chatbot.png" alt="Chatbot" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">CLI Chatbot</small>
-            <h3>A Python Based Application</h3>
-            <p>
-              A Simple intent-based chatbot using NLTK + tflearn(TensorFlow). Trains or loads a model, maps input text to intent responses.
-            </p>
-            <a href="https://github.com/mojojompe" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* Facial Recognition Software */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/FR Software.png" alt="FR Software" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">Facial Recognition Software</small>
-            <h3>A Python Based Application</h3>
-            <p>
-              Uses Tkinter GUI for face-recognition attendance (OpenCV + PIL + pandas). Implements image capture, training and live tracking. Saves/reads CSV and image datasets.
-            </p>
-            <a href="https://github.com/mojojompe" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* AYLA Voice Assistant */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/AYLA Voice Assistant.png" alt="Ayla" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">AYLA Voice Assistant</small>
-            <h3>A Python Based Application</h3>
-            <p>
-              Voice assistant using pyttsx3 and Speech Recognition. Listens via microphone, performs actions (Wikipedia lookup, open websites, open apps) and speaks responses, uses SAPI5 voice on Windows.
-            </p>
-            <a href="https://github.com/mojojompe" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-
-        {/* Safe Route Ai */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/SafeRoute.png" alt="Safe Route" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">Safe Route Ai</small>
-            <h3>Ai powered Navigation Application</h3>
-            <p>
-              Built with React, Nodejs and Raindrop Ai Apis, Safe Route Ai helps
-              users choose safer walking and driving routes by scoring paths
-              based on risk, environment, and real time indicators. Before a
-              user starts a journey, the app shows multiple route options with
-              safety scores, reasons for the score, and safer alternatives.
-            </p>
-            <a href="https://safe-route-ai.vercel.app" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* Finalytics */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/Finalytics.png" alt="finalytics" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">Finalytics</small>
-            <h3>Stock Market Analysis Dashboard</h3>
-            <p>
-              Real time market visualisation and Ai powered visualizations and
-              Ai powered price predictions using LSTM neural networks.
-              Integrated multiple financial data APIs and built an interactive
-              dashboard with real time updates and dynamic charts
-            </p>
-            <a href="https://market-finalytics.vercel.app" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* OutbreakIQ */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/OutbreakIQ.png" alt="Outbreakiq" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">OutbreakIQ</small>
-            <h3>Disease Prediction Dashboard</h3>
-            <p>
-              From Numpy, Tensorflow for ML training, to Next.js for
-              Visualization, OutbreakIQ is an AI powered health Intelligence
-              system that tracks, monitors and predicts disease outbreaks across
-              Nigeria.
-            </p>
-            <a href="" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* Goftem Stores */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/Goftem.png" alt="campusTech" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">Goftem Stores</small>
-            <h3>E Commerce Website | Freelance</h3>
-            <p>
-              Built with Next.js, MongoDB, Express.js and Node.js, the Website
-              allows users to browse products, make payments and also track
-              orders.
-            </p>
-            <a href="https://goftemstores.vercel.app" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* Medicare */}
-        <div className="projects-grid">
-          <div className="proj-media">
-            <img src="/Medicare.png" alt="medicare" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">MediCare</small>
-            <h3>Digital healthcare platform</h3>
-            <p>
-              Built with TypeScript, React and Node.js, Medicare bridges the gap
-              between healthcare providers and patients, simplifying healthcare
-              services.
-            </p>
-            <a href="https://medicare-home.vercel.app" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* Campus Tech */}
-        <div className="projects-grid reverse">
-          <div className="proj-media">
-            <img src="/CampusTech.png" alt="campusTech" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">Campus Tech Group</small>
-            <h3>Community platform</h3>
-            <p>
-              Built the frontend of a student collaboration portal using HTML,
-              CSS and JavaScript.
-            </p>
-            <a
-              href="https://campus-tech-group.vercel.app/"
-              className="proj-link"
-            >
-              View Project →
-            </a>
-          </div>
-        </div>
-
-        {/* Eduplanner */}
-        <div className="projects-grid">
-          <div className="proj-media">
-            <img src="/Eduplanner.jpg" alt="eduplanner" />
-          </div>
-          <div className="proj-card">
-            <small className="proj-tag">EduPlanner</small>
-            <h3>Student productivity app</h3>
-            <p>
-              A Web App and cross-platform mobile app built with React Native,
-              Node.js and MongoDB to help students organize tasks and boost
-              productivity.
-            </p>
-            <a href="https://edu-planner-home.vercel.app" className="proj-link">
-              View Project →
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
 };
+
+const CodeSnippet = ({ title, items, color }: { title: string, items: any[], color: string }) => (
+  <div className="code-card glass">
+    <div className="code-header">
+      <div className="window-controls">
+        <span></span><span></span><span></span>
+      </div>
+      <span className="file-name">{title}</span>
+    </div>
+    <div className="code-body">
+      {items.map((item, idx) => (
+        <div key={idx} className="code-line">
+          <span className="line-num">{idx + 1}</span>
+          <span className="keyword">import</span>{" "}
+          <span className="variable" style={{ color }}>{item.name}</span>{" "}
+          <span className="keyword">from</span>{" "}
+          <span className="string">"{item.name.toLowerCase()}"</span>;
+        </div>
+      ))}
+    </div>
+  </div>
+);
 
 export default About;

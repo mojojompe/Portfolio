@@ -1,43 +1,86 @@
+import { useEffect, useState, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Hero.css";
 
-const Hero = () => {
-  return (
-    <header id="hero" className="site-hero">
-      <div className="hero-inner">
-        <div
-          className="hero-content"
-          data-aos="fade-down"
-          data-aos-duration="1000"
-        >
-          <span className="eyebrow">Hey, I'm</span>
+gsap.registerPlugin(ScrollTrigger);
 
+const Hero = () => {
+  const [skillIndex, setSkillIndex] = useState(0);
+  const skills = [
+    "Full-Stack Developer",
+    "Mobile Application Developer",
+    "ML and AI Engineer",
+    "Cyber Security Specialist"
+  ];
+
+  const heroRef = useRef(null);
+  const bgRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSkillIndex((prev) => (prev + 1) % skills.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [skills.length]);
+
+  useEffect(() => {
+    // Parallax Effect
+    gsap.to(bgRef.current, {
+      yPercent: 30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
+
+  return (
+    <header id="hero" className="site-hero" ref={heroRef}>
+      <div className="hero-bg" ref={bgRef} style={{ backgroundImage: `url('/Main Backdrop.jpg')` }}></div>
+      <div className="hero-overlay"></div>
+
+      <div className="hero-inner">
+        <div className="hero-content" data-aos="fade-up">
           <h1 className="hero-name">
-            Emmanuel <strong>Jompe</strong>
+            Emmanuel Ayomiposi <span className="text-gradient">Jompe</span>
           </h1>
-          <h2 className="hero-role">Software Engineer.</h2>
+
+          <div className="rotating-skills">
+            <span className="static-text"></span>
+            <span key={skillIndex} className="dynamic-text">
+              {skills[skillIndex]}
+            </span>
+          </div>
 
           <p className="hero-blurb">
-            I am a Software Engineer with extensive experience with development
-            tools and a passion for creating innovative solutions, designing
-            scalable systems, and contributing immensely to the tech world.
+            Crafting scalable systems and innovative solutions. Bridging the gap between
+            complex backend logic and intuitive frontend experiences.
           </p>
 
           <div className="hero-actions">
-            <a className="cta" href="#projects">
-              See Projects
+            <a
+              className="cta-primary"
+              href="https://drive.google.com/file/d/1wo3hSGebGm-vAe1Jue4WsoawoGf906q5/view"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download Resume
             </a>
-            <a className="cta ghost" href="#about">
-              About Me
+            <a className="cta-secondary" href="#contact">
+              Connect with Me
             </a>
-          </div>
-
-          <div className="tech-inline">
-            <span className="tech-pill">Full-Stack Developer</span>
-            <span className="tech-pill">Mobile Developer</span>
-            <span className="tech-pill">ML and AI Engineer</span>
-            <span className="tech-pill">Cyber Security Specialist</span>
           </div>
         </div>
+      </div>
+
+      <div className="scroll-indicator">
+        <div className="mouse"></div>
+        <p>Scroll Down</p>
       </div>
     </header>
   );

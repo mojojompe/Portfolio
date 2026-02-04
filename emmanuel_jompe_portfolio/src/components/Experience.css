@@ -1,0 +1,119 @@
+.experience-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 4rem auto;
+}
+
+/* Vertical Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--glass-border);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* Left/Right Logic */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Icons */
+.timeline-icon {
+    position: absolute;
+    top: 24px;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-dark);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    z-index: 10;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -25px;
+}
+
+.timeline-content {
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.timeline-content:hover {
+    border-color: var(--accent);
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--accent);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+    margin: 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.timeline-content h4 {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-icon {
+        left: 5px;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(even) .timeline-icon {
+        left: 5px;
+    }
+}

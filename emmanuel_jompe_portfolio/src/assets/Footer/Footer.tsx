@@ -1,60 +1,58 @@
 import "./Footer.css";
-import { FaPhone } from "react-icons/fa";
+import { FaPhone, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdWhatsapp } from "react-icons/md";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaLocationDot,
-  FaTwitter,
-} from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 import { SiGithub, SiGmail } from "react-icons/si";
 
 const Footer = () => {
   return (
     <footer className="site-footer">
+      <div className="footer-bg-image" style={{ backgroundImage: `url('/Official.jpg')` }}></div>
+      <div className="footer-overlay"></div>
+
       <div className="footer-inner">
-
         <div className="footer-brand">
-          <h2>Emmanuel Ayomiposi Jompe</h2>
-          <p>Software Engineer • Cyber Security Specialist</p>
-
-          <div className="footer-info">
-            <div><FaLocationDot /> Lagos, Nigeria</div>
-            <div><SiGmail /> ayomiposiemmanuel9@gmail.com</div>
-            <div><FaPhone /> +234 807 145 5374</div>
-          </div>
+          <h2>Emmanuel Jompe</h2>
+          <p className="footer-role">Software Engineer • Cyber Security Specialist</p>
+          <p className="footer-desc">
+            Building digital experiences with passion and precision.
+            Let's create something remarkable together.
+          </p>
         </div>
 
-        <div className="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-              <a href="https://drive.google.com/file/d/1wo3hSGebGm-vAe1Jue4WsoawoGf906q5/view">
-                Resume
-              </a>
-            </li>
-          </ul>
+        <div className="footer-links-group">
+          <div className="footer-col">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h3>Contact</h3>
+            <ul>
+              <li className="icon-link"><SiGmail /> ayomiposiemmanuel9@gmail.com</li>
+              <li className="icon-link"><FaPhone /> +234 807 145 5374</li>
+              <li className="icon-link"><FaLocationDot /> Lagos, Nigeria</li>
+            </ul>
+          </div>
         </div>
 
         <div className="footer-socials">
-          <h3>Socials</h3>
-          <div className="social-row">
-            <a href="https://github.com/mojojompe"><SiGithub /></a>
-            <a href="http://www.linkedin.com/in/emmanuel-jompe"><FaLinkedin /></a>
-            <a href="mailto: ayomiposiemmanuel(@gmail.com"><SiGmail /></a>
-            <a href="https://wa.me/2348071455374"><MdWhatsapp /></a>
-            <a href="https://www.instagram.com/emmanuel_jompe/"><FaInstagram /></a>
-            <a href="https://twitter.com/EmmanuelJompe"><FaTwitter /></a>
-          </div>
+          <a href="https://github.com/mojojompe" target="_blank" rel="noreferrer"><SiGithub /></a>
+          <a href="http://www.linkedin.com/in/emmanuel-jompe" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+          <a href="https://wa.me/2348071455374" target="_blank" rel="noreferrer"><MdWhatsapp /></a>
+          <a href="https://twitter.com/EmmanuelJompe" target="_blank" rel="noreferrer"><FaTwitter /></a>
+          <a href="https://www.instagram.com/emmanuel_jompe/" target="_blank" rel="noreferrer"><FaInstagram /></a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Emmanuel Jompe — All rights reserved.
+        <p>© {new Date().getFullYear()} Emmanuel Jompe. All rights reserved.</p>
       </div>
     </footer>
   );
