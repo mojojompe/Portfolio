@@ -135,6 +135,109 @@ const About = () => {
       <div className="projects-section" id="projects">
         <h2 className="section-title">Projects</h2>
 
+        {/* Character Recognition Model */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/Character Recognition Code.png" alt="Character Model" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">Handwritten Character Recognition Model</small>
+            <h3>A Machine Learning Model</h3>
+            <p>
+            A deep learning project for recognizing handwritten characters from images using Convolutional Neural Networks (CNNs).
+            </p>
+            <a href="https://github.com/mojojompe/" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        {/* Disease Prediction Model */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/Disease Prediction Code.png" alt="Disease Model" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">Disease Prediction Model</small>
+            <h3>A Machine Learning Model</h3>
+            <p>
+             A disease prediction system utilizing ensemble learning techniques.
+            </p>
+            <a href="https://github.com/mojojompe/" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        {/* Credit Scoring Model */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/Credit Scoring Code.png" alt="Credit Model" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">Credit Scoring Model</small>
+            <h3>A Machine Learning Model</h3>
+            <p>
+             A machine learning model designed to predict creditworthiness based on applicant data.
+            </p>
+            <a href="https://github.com/mojojompe/" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        {/* Python Chatbot */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/Chatbot.png" alt="Chatbot" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">CLI Chatbot</small>
+            <h3>A Python Based Application</h3>
+            <p>
+             A Simple intent-based chatbot using NLTK + tflearn(TensorFlow). Trains or loads a model, maps input text to intent responses.
+            </p>
+            <a href="https://github.com/mojojompe" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+         {/* Facial Recognition Software */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/FR Software.png" alt="FR Software" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">Facial Recognition Software</small>
+            <h3>A Python Based Application</h3>
+            <p>
+              Uses Tkinter GUI for face-recognition attendance (OpenCV + PIL + pandas). Implements image capture, training and live tracking. Saves/reads CSV and image datasets.
+            </p>
+            <a href="https://github.com/mojojompe" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        {/* AYLA Voice Assistant */}
+        <div className="projects-grid reverse">
+          <div className="proj-media">
+            <img src="/AYLA Voice Assistant.png" alt="Ayla" />
+          </div>
+          <div className="proj-card">
+            <small className="proj-tag">AYLA Voice Assistant</small>
+            <h3>A Python Based Application</h3>
+            <p>
+              Voice assistant using pyttsx3 and Speech Recognition. Listens via microphone, performs actions (Wikipedia lookup, open websites, open apps) and speaks responses, uses SAPI5 voice on Windows.
+            </p>
+            <a href="https://github.com/mojojompe" className="proj-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+
         {/* Safe Route Ai */}
         <div className="projects-grid reverse">
           <div className="proj-media">
