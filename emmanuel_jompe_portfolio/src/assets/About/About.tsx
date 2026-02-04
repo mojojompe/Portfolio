@@ -144,7 +144,7 @@ const About = () => {
             <small className="proj-tag">Handwritten Character Recognition Model</small>
             <h3>A Machine Learning Model</h3>
             <p>
-            A deep learning project for recognizing handwritten characters from images using Convolutional Neural Networks (CNNs).
+              A deep learning project for recognizing handwritten characters from images using Convolutional Neural Networks (CNNs).
             </p>
             <a href="https://github.com/mojojompe/" className="proj-link">
               View Project →
@@ -161,7 +161,7 @@ const About = () => {
             <small className="proj-tag">Disease Prediction Model</small>
             <h3>A Machine Learning Model</h3>
             <p>
-             A disease prediction system utilizing ensemble learning techniques.
+              A disease prediction system utilizing ensemble learning techniques.
             </p>
             <a href="https://github.com/mojojompe/" className="proj-link">
               View Project →
@@ -178,7 +178,7 @@ const About = () => {
             <small className="proj-tag">Credit Scoring Model</small>
             <h3>A Machine Learning Model</h3>
             <p>
-             A machine learning model designed to predict creditworthiness based on applicant data.
+              A machine learning model designed to predict creditworthiness based on applicant data.
             </p>
             <a href="https://github.com/mojojompe/" className="proj-link">
               View Project →
@@ -195,7 +195,7 @@ const About = () => {
             <small className="proj-tag">CLI Chatbot</small>
             <h3>A Python Based Application</h3>
             <p>
-             A Simple intent-based chatbot using NLTK + tflearn(TensorFlow). Trains or loads a model, maps input text to intent responses.
+              A Simple intent-based chatbot using NLTK + tflearn(TensorFlow). Trains or loads a model, maps input text to intent responses.
             </p>
             <a href="https://github.com/mojojompe" className="proj-link">
               View Project →
@@ -203,7 +203,7 @@ const About = () => {
           </div>
         </div>
 
-         {/* Facial Recognition Software */}
+        {/* Facial Recognition Software */}
         <div className="projects-grid reverse">
           <div className="proj-media">
             <img src="/FR Software.png" alt="FR Software" />
