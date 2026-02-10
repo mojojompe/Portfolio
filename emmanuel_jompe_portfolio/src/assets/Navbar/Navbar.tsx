@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
-import { MdMenu, MdClose } from "react-icons/md";
+import { Menu02Icon } from "hugeicons-react";
+import { MdClose } from "react-icons/md"; // Keeping Close for now, or replace if user wants all hugeicons
+// User asked to replace menu with <HugeiconsIcon icon={Menu02Icon} />
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -16,9 +18,10 @@ const Navbar = () => {
 
   return (
     <nav className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
+      <div className="nav-glass-bg"></div>
       <div className="nav-wrap">
         <div className="nav-logo">
-          <img src="/LogoWhite.png" alt="" />
+          <img src="/LogoWhite.png" alt="Logo" />
         </div>
 
         <ul className={`nav-links ${open ? "open" : ""}`}>
@@ -36,7 +39,7 @@ const Navbar = () => {
         </ul>
 
         <button className="menu-btn" onClick={toggleMenu}>
-          {open ? <MdClose size={32}/> : <MdMenu size={32}/>}
+          {open ? <MdClose size={32} /> : <Menu02Icon size={32} color={"#000000"} />}
         </button>
       </div>
     </nav>

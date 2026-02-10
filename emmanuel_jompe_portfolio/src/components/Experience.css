@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.experience-section .section-title {
+    color: #000000 !important;
+}
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -115,5 +119,10 @@
 
     .timeline-item:nth-child(even) .timeline-icon {
         left: 5px;
+    }
+
+    .experience-section {
+        padding-bottom: 2rem;
+        /* Reduced padding to prevent overlap */
     }
 }

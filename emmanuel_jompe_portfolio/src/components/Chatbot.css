@@ -1,55 +1,69 @@
 .chatbot-wrapper {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 2rem;
+    right: 2rem;
     z-index: 9999;
+}
+
+.chatbot-wrapper.active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+    /* Behind the chatbot window but above everything else */
 }
 
 .chatbot-toggle {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: var(--accent);
+    background: var(--bg-pure-black);
     color: white;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 15px var(--accent-glow);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 10000;
 }
 
 .chatbot-toggle:hover {
     transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .chatbot-toggle.open {
     transform: rotate(90deg);
-    background: #ef4444;
-    /* Red for close */
-    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    background: var(--bg-light);
+    color: var(--text-primary);
+    border: 1px solid var(--glass-border);
 }
 
 .chatbot-window {
-    position: absolute;
-    bottom: 80px;
-    right: 0;
-    width: 350px;
-    height: 500px;
-    background: rgba(15, 17, 21, 0.95);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transform: translateY(20px) scale(0.9);
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    /* Default position before centering */
+    width: 400px;
+    height: 600px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     opacity: 0;
+    transform: translateY(20px) scale(0.95);
     pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 9999;
+    transform-origin: bottom right;
 }
 
 .chatbot-window.open {
@@ -173,15 +187,29 @@
 
 @media (max-width: 480px) {
     .chatbot-window {
+        position: fixed;
+        /* Fix to viewport */
+        top: 0;
+        left: 0;
         bottom: 0;
         right: 0;
         width: 100%;
         height: 100vh;
         border-radius: 0;
+        border-radius: 0;
+        transform: translateY(20px) scale(0.95);
+        z-index: 10000;
+        /* Ensure on top */
     }
 
-    .chatbot-wrapper {
-        bottom: 20px;
-        right: 20px;
+    .chatbot-window.open {
+        transform: translateY(0) scale(1);
     }
+
+    /* Ensure toggle button (close button) is visible above the open window */
+    .chatbot-wrapper {
+        z-index: 10001;
+    }
+
+
 }

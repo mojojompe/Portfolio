@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef, useCallback } from 'react';
 import type { ReactNode } from 'react';
 import Lenis from 'lenis';
+import './ScrollStack.css';
 
 export interface ScrollStackItemProps {
     itemClassName?: string;
@@ -8,15 +9,7 @@ export interface ScrollStackItemProps {
 }
 
 export const ScrollStackItem: React.FC<ScrollStackItemProps> = ({ children, itemClassName = '' }) => (
-    <div
-        className={`scroll-stack-card relative w-full h-80 my-8 p-12 rounded-[40px] shadow-[0_0_30px_rgba(0,0,0,0.1)] box-border origin-top will-change-transform ${itemClassName}`.trim()}
-        style={{
-            backfaceVisibility: 'hidden',
-            transformStyle: 'preserve-3d'
-        }}
-    >
-        {children}
-    </div>
+    <div className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
 );
 
 interface ScrollStackProps {
@@ -81,9 +74,9 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
         } else {
             const scroller = scrollerRef.current;
             return {
-                scrollTop: scroller ? scroller.scrollTop : 0,
-                containerHeight: scroller ? scroller.clientHeight : 0,
-                scrollContainer: scroller
+                scrollTop: scroller!.scrollTop,
+                containerHeight: scroller!.clientHeight,
+                scrollContainer: scroller!
             };
         }
     }, [useWindowScroll]);
@@ -105,13 +98,13 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
 
         isUpdatingRef.current = true;
 
-        const { scrollTop, containerHeight, scrollContainer } = getScrollData();
+        const { scrollTop, containerHeight } = getScrollData();
         const stackPositionPx = parsePercentage(stackPosition, containerHeight);
         const scaleEndPositionPx = parsePercentage(scaleEndPosition, containerHeight);
 
         const endElement = useWindowScroll
-            ? (document.querySelector('.scroll-stack-end') as HTMLElement | null)
-            : (scrollerRef.current?.querySelector('.scroll-stack-end') as HTMLElement | null);
+            ? (document.querySelector('.scroll-stack-end') as HTMLElement)
+            : (scrollerRef.current?.querySelector('.scroll-stack-end') as HTMLElement);
 
         const endElementTop = endElement ? getElementOffset(endElement) : 0;
 
@@ -269,13 +262,15 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     }, [handleScroll, useWindowScroll]);
 
     useLayoutEffect(() => {
-        if (!useWindowScroll && !scrollerRef.current) return;
+        const scroller = scrollerRef.current;
+        if (!scroller) return;
 
         const cards = Array.from(
             useWindowScroll
                 ? document.querySelectorAll('.scroll-stack-card')
-                : (scrollerRef.current?.querySelectorAll('.scroll-stack-card') ?? [])
+                : scroller.querySelectorAll('.scroll-stack-card')
         ) as HTMLElement[];
+
         cardsRef.current = cards;
         const transformsCache = lastTransformsRef.current;
 
@@ -325,22 +320,11 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     ]);
 
     return (
-        <div
-            className={`relative w-full h-full overflow-y-auto overflow-x-visible ${className}`.trim()}
-            ref={scrollerRef}
-            style={{
-                overscrollBehavior: 'contain',
-                WebkitOverflowScrolling: 'touch',
-                scrollBehavior: 'smooth',
-                WebkitTransform: 'translateZ(0)',
-                transform: 'translateZ(0)',
-                willChange: 'scroll-position'
-            }}
-        >
-            <div className="scroll-stack-inner pt-[20vh] px-20 pb-[50rem] min-h-screen">
+        <div className={`scroll-stack-scroller ${className}`.trim()} ref={scrollerRef}>
+            <div className="scroll-stack-inner">
                 {children}
                 {/* Spacer so the last pin can release cleanly */}
-                <div className="scroll-stack-end w-full h-px" />
+                <div className="scroll-stack-end" />
             </div>
         </div>
     );

@@ -16,7 +16,7 @@ const Hero = () => {
 
   const heroRef = useRef(null);
   const bgRef = useRef(null);
-  const textRef = useRef(null);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,6 +24,22 @@ const Hero = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, [skills.length]);
+
+  const [typewriterText, setTypewriterText] = useState("");
+  const fullText = "Crafting scalable systems and innovative solutions. Bridging the gap between complex backend logic and intuitive frontend experiences.";
+
+  useEffect(() => {
+    let index = 0;
+    const typeInterval = setInterval(() => {
+      if (index <= fullText.length) {
+        setTypewriterText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(typeInterval);
+      }
+    }, 30);
+    return () => clearInterval(typeInterval);
+  }, []);
 
   useEffect(() => {
     // Parallax Effect
@@ -41,13 +57,14 @@ const Hero = () => {
 
   return (
     <header id="hero" className="site-hero" ref={heroRef}>
-      <div className="hero-bg" ref={bgRef} style={{ backgroundImage: `url('/Main Backdrop.jpg')` }}></div>
+      <div className="hero-bg" ref={bgRef} style={{ backgroundImage: `url('/Official.jpg')` }}></div>
       <div className="hero-overlay"></div>
 
       <div className="hero-inner">
         <div className="hero-content" data-aos="fade-up">
+
           <h1 className="hero-name">
-            Emmanuel Ayomiposi <span className="text-gradient">Jompe</span>
+            Emmanuel Ayomiposi Jompe
           </h1>
 
           <div className="rotating-skills">
@@ -58,8 +75,8 @@ const Hero = () => {
           </div>
 
           <p className="hero-blurb">
-            Crafting scalable systems and innovative solutions. Bridging the gap between
-            complex backend logic and intuitive frontend experiences.
+            {typewriterText}
+            <span className="cursor">|</span>
           </p>
 
           <div className="hero-actions">

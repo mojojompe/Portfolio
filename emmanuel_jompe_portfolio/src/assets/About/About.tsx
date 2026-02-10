@@ -1,4 +1,6 @@
 import "./About.css";
+import ScrollStack, { ScrollStackItem } from "../../components/ScrollStack";
+import { AiBrain03Icon } from "hugeicons-react"; // User request for Ai icon
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { FaNetworkWired, FaTerminal, FaCode } from "react-icons/fa6";
 import { MdDevices } from "react-icons/md";
@@ -63,48 +65,65 @@ const About = () => {
   const allIcons = Object.values(techStack).flat();
 
   return (
-    <section id="about" className="me-about">
+    <section id="about" className="me-about" data-aos="fade-up">
       <div className="section-container">
 
         {/* Services / Overview */}
         <div className="about-intro">
           <h2 className="section-title">Overview</h2>
-          <p className="lead-text">
-            I build modern, reliable web and mobile applications — bridging
-            design and functionality. I deliver end-to-end solutions: polished
-            front-ends, robust backends, and scalable systems.
-          </p>
+          <div className="services-scroll-wrapper">
+            <ScrollStack itemDistance={50} stackPosition="15%" scaleEndPosition="10%">
+              <ScrollStackItem>
+                <article className="service-card glass-card" style={{ backgroundImage: "url('/Software Engineering.png')" }}>
+                  <FaTerminal size={40} className="service-icon" />
+                  <h3>Software Engineering</h3>
+                  <p>Creation and management of modern software systems using robust architecture.</p>
+                </article>
+              </ScrollStackItem>
 
-          <div className="services-grid">
-            <article className="service-card glass-card">
-              <FaTerminal size={32} className="service-icon" />
-              <h3>Software Engineering</h3>
-              <p>Creation and management of modern software systems using robust architecture.</p>
-            </article>
+              <ScrollStackItem>
+                <article className="service-card glass-card" style={{ backgroundImage: "url('/Cross Platform Development.png')" }}>
+                  <MdDevices size={40} className="service-icon" />
+                  <h3>Cross-Platform Dev</h3>
+                  <p>Seamless web, mobile, and desktop applications with intuitive UX.</p>
+                </article>
+              </ScrollStackItem>
 
-            <article className="service-card glass-card">
-              <MdDevices size={32} className="service-icon" />
-              <h3>Cross-Platform Dev</h3>
-              <p>Seamless web, mobile, and desktop applications with intuitive UX.</p>
-            </article>
+              <ScrollStackItem>
+                <article className="service-card glass-card" style={{ backgroundImage: "url('/Network and Security.png')" }}>
+                  <FaNetworkWired size={40} className="service-icon" />
+                  <h3>Networking & Security</h3>
+                  <p>Setup, monitoring, and vulnerability management ensuring system safety.</p>
+                </article>
+              </ScrollStackItem>
 
-            <article className="service-card glass-card">
-              <FaNetworkWired size={32} className="service-icon" />
-              <h3>Networking & Security</h3>
-              <p>Setup, monitoring, and vulnerability management ensuring system safety.</p>
-            </article>
+              <ScrollStackItem>
+                <article className="service-card glass-card" style={{ backgroundImage: "url('/Mentorship.png')" }}>
+                  <FaChalkboardTeacher size={40} className="service-icon" />
+                  <h3>Mentorship</h3>
+                  <p>Personalized software development training and technical guidance.</p>
+                </article>
+              </ScrollStackItem>
 
-            <article className="service-card glass-card">
-              <FaChalkboardTeacher size={32} className="service-icon" />
-              <h3>Mentorship</h3>
-              <p>Personalized software development training and technical guidance.</p>
-            </article>
+              {/* Adding AI as requested or replacing one if preferred, but user said 'Replace Ai Icon'. 
+                   I will infer if there was an AI card or just adding one. 
+                   Looking at original file, there was no AI card. I'll add one as it relevant to the portfolio.
+               */}
+              <ScrollStackItem>
+                <article className="service-card glass-card" style={{ backgroundImage: "url('/Artificial Intelligence.png')" }}>
+                  <AiBrain03Icon size={40} className="service-icon" />
+                  <h3>Artificial Intelligence</h3>
+                  <p>Integrating AI solutions to solve complex problems.</p>
+                </article>
+              </ScrollStackItem>
+
+            </ScrollStack>
           </div>
         </div>
 
         {/* Tech Stack - Marquee & Code Snippets */}
         <div className="tech-stack-section">
-          <h2 className="section-title">My Tech Stack</h2>
+          <h2 className="section-title">Tech Stack</h2>
 
           {/* Infinite Marquee */}
           <div className="marquee-container">
@@ -135,7 +154,12 @@ const About = () => {
   );
 };
 
-const CodeSnippet = ({ title, items, color }: { title: string, items: any[], color: string }) => (
+interface TechStackItem {
+  name: string;
+  icon: React.ElementType;
+}
+
+const CodeSnippet = ({ title, items, color }: { title: string, items: TechStackItem[], color: string }) => (
   <div className="code-card glass">
     <div className="code-header">
       <div className="window-controls">

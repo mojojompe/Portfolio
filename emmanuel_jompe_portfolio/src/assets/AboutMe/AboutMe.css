@@ -1,0 +1,78 @@
+.about-me-section {
+    padding: 100px 0;
+    position: relative;
+    background: var(--bg-light);
+    overflow: hidden;
+}
+
+.about-me-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-me-section .section-title {
+    color: #000000 !important;
+}
+
+.about-me-image-wrapper {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-me-image-wrapper:hover .about-me-image {
+    transform: scale(1.03);
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.section-title.left-align {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.about-me-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+    .about-me-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-me-image-wrapper {
+        height: 400px;
+        /* Smaller height on mobile if needed, or keep auto */
+        order: -1;
+        /* Image on top? User didn't specify, standard practice */
+    }
+
+    .section-title.left-align {
+        text-align: center;
+    }
+
+    .about-me-content {
+        text-align: center;
+    }
+}

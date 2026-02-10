@@ -1,7 +1,8 @@
 .me-about {
   padding: 100px 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  /* changed from hidden to allow scroll stack to work properly if needed */
 }
 
 .section-container {
@@ -15,18 +16,16 @@
   text-align: center;
 }
 
-.lead-text {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  max-width: 800px;
-  margin: 0 auto 4rem;
+.about-intro .section-title {
+  color: #000000 !important;
+  /* Explicitly black */
 }
 
-/* Services Grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+/* Services Scroll Wrapper */
+.services-scroll-wrapper {
+  height: 80vh;
+  /* Allow sufficient height for scroll stack */
+  width: 100%;
 }
 
 .service-card {
@@ -36,27 +35,114 @@
   text-align: center;
   border-radius: 20px;
   border: 1px solid var(--glass-border);
+  height: 100%;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6);
+  /* Light glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+
+/* Background overlay for text readability */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+.service-card:hover::before {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Ensure content is above overlay */
+.service-card>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* Individual card backgrounds - Target through ScrollStackItem parent */
+.services-scroll-wrapper>div>div:nth-of-type(1) .service-card {
+  background-image: url('/Software Engineering.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.services-scroll-wrapper>div>div:nth-of-type(2) .service-card {
+  background-image: url('/Cross Platform Development.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.services-scroll-wrapper>div>div:nth-of-type(3) .service-card {
+  background-image: url('/Network and Security.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.services-scroll-wrapper>div>div:nth-of-type(4) .service-card {
+  background-image: url('/Mentorship.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.services-scroll-wrapper>div>div:nth-of-type(5) .service-card {
+  background-image: url('/Artificial Intelligence.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .service-icon {
   margin-bottom: 1.5rem;
   color: var(--accent);
-  filter: drop-shadow(0 0 10px var(--accent-glow));
+  /* Dark icon */
+  filter: none;
 }
 
 .service-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: #000000;
+  /* Explicitly black */
 }
 
 .service-card p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  max-width: 80%;
 }
 
 /* Tech Stack */
 .tech-stack-section {
   position: relative;
+  margin-top: 10rem;
+}
+
+.tech-stack-section .section-title {
+  color: #000000 !important;
+  /* Explicitly black */
 }
 
 .marquee-container {
@@ -82,7 +168,7 @@
 }
 
 .marquee-item:hover {
-  color: var(--accent);
+  color: var(--text-inverse);
 }
 
 @keyframes scrollLeft {
@@ -180,6 +266,28 @@
 @media (max-width: 768px) {
   .me-about {
     padding: 60px 0;
+  }
+
+  .about-intro {
+    margin-bottom: 3rem;
+    /* Reduced from 6rem */
+  }
+
+  .services-scroll-wrapper {
+    height: 80vh;
+    /* Reduced height for mobile but still allow scroll stack to work */
+    margin-bottom: 3rem;
+  }
+
+  .service-card {
+    min-height: 400px;
+    width: 70vw;
+    max-width: 80vw;
+  }
+
+  .tech-stack-section {
+    margin-top: 3rem;
+    /* Reduced from 10rem */
   }
 
   .section-title {

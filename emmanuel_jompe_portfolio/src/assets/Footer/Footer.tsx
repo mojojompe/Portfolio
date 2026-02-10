@@ -6,7 +6,7 @@ import { SiGithub, SiGmail } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="site-footer">
+    <footer className="site-footer" data-aos="fade-in">
       <div className="footer-bg-image" style={{ backgroundImage: `url('/Official.jpg')` }}></div>
       <div className="footer-overlay"></div>
 

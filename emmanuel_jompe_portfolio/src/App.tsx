@@ -4,6 +4,7 @@ import Lenis from "lenis";
 import Navbar from "./assets/Navbar/Navbar";
 import Hero from "./assets/Hero/Hero";
 import About from "./assets/About/About";
+import AboutMe from "./assets/AboutMe/AboutMe";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./assets/Contact/Contact";
@@ -35,8 +36,29 @@ function App() {
     }
     requestAnimationFrame(raf);
 
+    // Handle Anchor Links for Smooth Scroll
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const link = target.closest("a");
+      if (link && link.getAttribute("href")?.startsWith("#")) {
+        e.preventDefault();
+        const id = link.getAttribute("href")!;
+        if (id === "#") {
+          lenis.scrollTo(0);
+        } else {
+          const element = document.querySelector(id);
+          if (element) {
+            lenis.scrollTo(element as HTMLElement);
+          }
+        }
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+
     return () => {
       lenis.destroy();
+      document.removeEventListener("click", handleAnchorClick);
     };
   }, []);
 
@@ -45,6 +67,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <AboutMe />
         <About />
         <Projects />
         <Experience />
