@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import "./Projects.css";
 
 import { MdClose, MdArrowOutward } from "react-icons/md";
@@ -149,6 +150,12 @@ const categories = ["Web", "Mobile", "AI", "ML", "CLI"];
 const Projects = () => {
     const [activeCategory, setActiveCategory] = useState("Web");
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+        return () => setMounted(false);
+    }, []);
 
     const filteredProjects = projectsData.filter(
         (project) => project.category === activeCategory
@@ -218,14 +225,12 @@ const Projects = () => {
                     )}
                 </div>
 
-                {/* Fullscreen Modal */}
-                {selectedProject && (
+                {/* Fullscreen Modal Portal */}
+                {mounted && selectedProject && createPortal(
                     <div className="project-modal-overlay active" data-lenis-prevent>
                         <div className="project-modal-backdrop" onClick={closeModal}></div>
-                        <div className="project-modal-content">
-                            <div className="modal-img-full">
-                                <img src={selectedProject.image} alt={selectedProject.title} />
-                            </div>
+                        <div className="project-modal-content" style={{ backgroundImage: `url(${selectedProject.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div className="modal-dark-overlay"></div>
 
                             <button className="close-modal" onClick={closeModal}>
                                 <MdClose size={32} />
@@ -255,7 +260,8 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>,
+                    document.body
                 )}
             </div>
         </section>
