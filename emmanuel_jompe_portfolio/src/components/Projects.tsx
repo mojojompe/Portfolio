@@ -19,12 +19,33 @@ interface Project {
 const projectsData: Project[] = [
     // Web
     {
+        id: "reportam",
+        category: "Web",
+        title: "Reportam",
+        description: "A web app where residents report and track community problems in Oyo State, Nigeria",
+        image: "/Reportam.png",
+        link: "https://reportam.vercel.app",
+        github: "https://github.com/mojojompe/Reportam",
+        tech: ["Next.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    },
+    {
+        id: "medicare",
+        category: "Web",
+        title: "MediCare",
+        description: "Digital healthcare platform bridging the gap between healthcare providers and patients.",
+        image: "/Medicare.png",
+        link: "https://medicare-home.vercel.app",
+        github: "https://github.com/mojojompe/Medicare",
+        tech: ["TypeScript", "React", "Node.js", "Express.js"],
+    },
+    {
         id: "campus-tech",
         category: "Web",
         title: "Campus Tech",
         description: "Built the frontend of a student collaboration portal using HTML, CSS and JavaScript.",
         image: "/CampusTech.png",
         link: "https://campus-tech-group.vercel.app/",
+        github: "https://github.com/mojojompe/Campus-Tech",
         tech: ["HTML", "CSS", "JS"],
     },
     {
@@ -34,17 +55,10 @@ const projectsData: Project[] = [
         description: "Built with Next.js, MongoDB, Express.js and Node.js. Allows users to browse products, make payments and track orders.",
         image: "/Goftem.png",
         link: "https://goftemstores.vercel.app",
+        github: "https://github.com/mojojompe",
         tech: ["Next.js", "MongoDB", "Express", "Node.js"],
     },
-    {
-        id: "medicare",
-        category: "Web",
-        title: "MediCare",
-        description: "Digital healthcare platform bridging the gap between healthcare providers and patients.",
-        image: "/Medicare.png",
-        link: "https://medicare-home.vercel.app",
-        tech: ["TypeScript", "React", "Node.js", "Express.js"],
-    },
+    
 
     // Mobile
     {
@@ -54,6 +68,7 @@ const projectsData: Project[] = [
         description: "Student productivity app built with React Native, Node.js and MongoDB to help students organize tasks.",
         image: "/Eduplanner.jpg",
         link: "https://edu-planner-home.vercel.app",
+        github: "https://github.com/mojojompe",
         tech: ["React Native", "Node.js", "MongoDB", "Firebase"],
     },
 
@@ -65,6 +80,7 @@ const projectsData: Project[] = [
         description: "AI powered health Intelligence system that tracks, monitors and predicts disease outbreaks across Nigeria.",
         image: "/OutbreakIQ.png",
         link: "https://github.com/mojojompe/",
+        github: "https://github.com/folabas/",
         tech: ["Numpy", "Tensorflow", "Next.js"],
     },
     {
@@ -74,6 +90,7 @@ const projectsData: Project[] = [
         description: "Real time market visualisation and Ai powered price predictions using LSTM neural networks.",
         image: "/Finalytics.png",
         link: "https://market-finalytics.vercel.app",
+        github: "https://github.com/mojojompe/finalytics",
         tech: ["LSTM", "Python", "React"],
     },
     {
@@ -83,6 +100,7 @@ const projectsData: Project[] = [
         description: "Helps users choose safer walking and driving routes by scoring paths based on risk and environment.",
         image: "/SafeRoute.png",
         link: "https://safe-route-ai.vercel.app",
+        github: "https://github.com/mojojompe/Safe-Route-Ai",
         tech: ["React", "Node.js", "Raindrop API", "Mapbox", "MongoDB"],
     },
 
@@ -94,6 +112,7 @@ const projectsData: Project[] = [
         description: "A machine learning model designed to predict creditworthiness based on applicant data.",
         image: "/Credit Scoring Code.png",
         link: "https://github.com/mojojompe/",
+        github: "https://github.com/mojojompe/",
         tech: ["Python", "Scikit-learn"],
     },
     {
@@ -103,6 +122,7 @@ const projectsData: Project[] = [
         description: "A disease prediction system utilizing ensemble learning techniques.",
         image: "/Disease Prediction Code.png",
         link: "https://github.com/mojojompe/",
+        github: "https://github.com/mojojompe/",
         tech: ["Ensemble Learning", "Python"],
     },
     {
@@ -123,6 +143,7 @@ const projectsData: Project[] = [
         description: "Voice assistant using pyttsx3 and Speech Recognition. Performs actions and speaks responses.",
         image: "/AYLA Voice Assistant.png",
         link: "https://github.com/mojojompe",
+        github: "https://github.com/mojojompe",
         tech: ["Python", "pyttsx3"],
     },
     {
@@ -132,6 +153,7 @@ const projectsData: Project[] = [
         description: "Uses Tkinter GUI for face-recognition attendance. Implements image capture, training and live tracking.",
         image: "/FR Software.png",
         link: "https://github.com/mojojompe",
+        github: "https://github.com/mojojompe",
         tech: ["OpenCV", "Tkinter", "Pandas"],
     },
     {
@@ -139,8 +161,9 @@ const projectsData: Project[] = [
         category: "CLI",
         title: "Clinic Management System",
         description: "Comprehensive CLI-based Clinic Management System featuring patient and doctor management.",
-        image: "/CLI code.png", // Assuming image name from previous context or using a placeholder if not
+        image: "/CLI code.png", 
         link: "https://github.com/mojojompe",
+        github: "https://github.com/mojojompe",
         tech: ["Python", "CLI"],
     }
 ];
