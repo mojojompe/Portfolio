@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Menu02Icon } from "hugeicons-react";
-import { MdClose } from "react-icons/md"; // Keeping Close for now, or replace if user wants all hugeicons
-// User asked to replace menu with <HugeiconsIcon icon={Menu02Icon} />
+import { MdClose } from "react-icons/md";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -32,7 +31,7 @@ const Navbar = () => {
           <li>
             <a
               className="resume-btn"
-              href="https://drive.google.com/file/d/1wo3hSGebGm-vAe1Jue4WsoawoGf906q5/view"
+              href="https://docs.google.com/document/d/1Hgg03Y3pvteZj3MMnOugyqTlt5RyNIyv/edit?usp=drive_link&ouid=104087193776407225339&rtpof=true&sd=true"
               target="_blank"
             >Resume</a>
           </li>
