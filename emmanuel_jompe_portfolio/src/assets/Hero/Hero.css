@@ -295,6 +295,11 @@
 }
 
 @media (max-width: 768px) {
+  .site-hero {
+    padding: 100px 1.25rem 60px;
+    /* Increased top padding to clear fixed navbar, added horizontal padding */
+  }
+
   .hero-name {
     font-size: 2.5rem;
   }

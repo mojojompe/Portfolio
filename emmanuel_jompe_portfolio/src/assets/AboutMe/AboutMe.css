@@ -59,6 +59,13 @@
     .about-me-container {
         grid-template-columns: 1fr;
         gap: 3rem;
+        padding: 0 1.25rem;
+        /* Tighter side padding on mobile */
+    }
+
+    .about-me-section {
+        padding: 60px 0;
+        /* Reduced top/bottom padding on mobile */
     }
 
     .about-me-image-wrapper {

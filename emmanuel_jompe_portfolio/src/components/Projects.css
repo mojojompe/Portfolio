@@ -414,6 +414,11 @@
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+    .projects-section {
+        padding: 60px 1.25rem;
+        /* Add horizontal padding and reduce vertical padding on mobile */
+    }
+
     .project-img-container {
         height: 250px;
     }

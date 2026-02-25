@@ -140,4 +140,14 @@
     flex-direction: column;
     gap: 3rem;
   }
+
+  .site-footer {
+    padding: 60px 0 20px;
+    /* Reduced top padding on mobile */
+  }
+
+  .footer-inner {
+    padding: 0 1.25rem;
+    /* Tighter side padding on mobile */
+  }
 }

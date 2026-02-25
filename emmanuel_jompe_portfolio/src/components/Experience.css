@@ -122,7 +122,7 @@
     }
 
     .experience-section {
-        padding-bottom: 2rem;
-        /* Reduced padding to prevent overlap */
+        padding: 60px 1.25rem 2rem;
+        /* Reduced padding and added horizontal padding to prevent edge-to-edge content */
     }
 }
