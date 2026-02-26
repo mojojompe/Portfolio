@@ -1,7 +1,7 @@
 import "./Footer.css";
 import { FaPhone, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdWhatsapp } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaSnapchat } from "react-icons/fa6";
 import { SiGithub, SiGmail } from "react-icons/si";
 
 const Footer = () => {
@@ -16,7 +16,6 @@ const Footer = () => {
           <p className="footer-role">Software Engineer • Cyber Security Specialist</p>
           <p className="footer-desc">
             Building digital experiences with passion and precision.
-            Let's create something remarkable together.
           </p>
         </div>
 
@@ -47,6 +46,7 @@ const Footer = () => {
           <a href="http://www.linkedin.com/in/emmanuel-jompe" target="_blank" rel="noreferrer"><FaLinkedin /></a>
           <a href="https://wa.me/2348071455374" target="_blank" rel="noreferrer"><MdWhatsapp /></a>
           <a href="https://twitter.com/EmmanuelJompe" target="_blank" rel="noreferrer"><FaTwitter /></a>
+          <a href="https://www.snapchat.com/emmanuelmojo1/" target="_blank" rel="noreferrer"><FaSnapchat /></a>
           <a href="https://www.instagram.com/emmanuel_jompe/" target="_blank" rel="noreferrer"><FaInstagram /></a>
         </div>
       </div>

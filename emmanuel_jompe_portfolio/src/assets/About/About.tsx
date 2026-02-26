@@ -73,6 +73,7 @@ const About = () => {
           <h2 className="section-title">Overview</h2>
           <div className="services-scroll-wrapper">
             <ScrollStack itemDistance={50} stackPosition="15%" scaleEndPosition="10%">
+              
               <ScrollStackItem>
                 <article className="service-card glass-card" style={{ backgroundImage: "url('/Software Engineering.png')" }}>
                   <FaTerminal size={40} className="service-icon" />
@@ -105,10 +106,6 @@ const About = () => {
                 </article>
               </ScrollStackItem>
 
-              {/* Adding AI as requested or replacing one if preferred, but user said 'Replace Ai Icon'. 
-                   I will infer if there was an AI card or just adding one. 
-                   Looking at original file, there was no AI card. I'll add one as it relevant to the portfolio.
-               */}
               <ScrollStackItem>
                 <article className="service-card glass-card" style={{ backgroundImage: "url('/Artificial Intelligence.png')" }}>
                   <AiBrain03Icon size={40} className="service-icon" />

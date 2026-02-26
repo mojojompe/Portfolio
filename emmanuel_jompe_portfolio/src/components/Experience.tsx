@@ -7,21 +7,21 @@ const Experience = () => {
             type: "work",
             title: "Machine Learning Intern",
             company: "Code Alpha Inc.",
-            period: "2026 - Present",
+            period: "Jan - Feb 2026",
             desc: "Developing scalable Machine Learning Models"
         },
         {
             type: "work",
             title: "Full Stack Developer Intern",
             company: "Goftem Multiservices Ltd.",
-            period: "2024 - 2025",
+            period: "Jul 2024 - Aug 2025",
             desc: "Collaborated on frontend interfaces using React and assisted with API integration."
         },
         {
             type: "education",
             title: "B.Sc. Software Engineering",
             company: "Lead City University",
-            period: "2023 - 2027",
+            period: "Sept 2023 - Nov 2027",
             desc: "Specialized in Software Engineering and Artificial Intelligence."
         }
     ];

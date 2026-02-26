@@ -21,7 +21,7 @@ const projectsData: Project[] = [
     {
         id: "reportam",
         category: "Web",
-        title: "Reportam",
+        title: "ReportAm",
         description: "A web app where residents report and track community problems in Oyo State, Nigeria",
         image: "/Reportam.png",
         link: "https://reportam.vercel.app",
@@ -41,7 +41,7 @@ const projectsData: Project[] = [
     {
         id: "campus-tech",
         category: "Web",
-        title: "Campus Tech",
+        title: "Campus Tech Group",
         description: "Built the frontend of a student collaboration portal using HTML, CSS and JavaScript.",
         image: "/CampusTech.png",
         link: "https://campus-tech-group.vercel.app/",
@@ -272,12 +272,12 @@ const Projects = () => {
                                 <div className="modal-actions">
                                     {selectedProject.link && (
                                         <a href={selectedProject.link} target="_blank" rel="noreferrer" className="modal-btn primary">
-                                            View Project <MdArrowOutward />
+                                            View <MdArrowOutward />
                                         </a>
                                     )}
                                     {selectedProject.github && (
                                         <a href={selectedProject.github} target="_blank" rel="noreferrer" className="modal-btn secondary">
-                                            <FaGithub /> Github
+                                            <FaGithub />
                                         </a>
                                     )}
                                 </div>
