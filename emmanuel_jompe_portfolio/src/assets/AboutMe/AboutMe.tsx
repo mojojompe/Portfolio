@@ -3,10 +3,8 @@ import "./AboutMe.css";
 const AboutMe = () => {
     return (
         <section id="about-me" className="about-me-section" data-aos="fade-up">
+            <div className="about-me-overlay"></div>
             <div className="about-me-container">
-                <div className="about-me-image-wrapper">
-                    <img src="/Main Backdrop.jpg" alt="Emmanuel Jompe" className="about-me-image" />
-                </div>
                 <div className="about-me-content">
                     <h2 className="section-title left-align">About Me</h2>
                     <p className="about-me-text">

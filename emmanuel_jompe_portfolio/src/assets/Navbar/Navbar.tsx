@@ -38,7 +38,7 @@ const Navbar = () => {
         </ul>
 
         <button className="menu-btn" onClick={toggleMenu}>
-          {open ? <MdClose size={32} /> : <Menu02Icon size={32} color={"#000000"} />}
+          {open ? <MdClose size={32} /> : <Menu02Icon size={32}/>}
         </button>
       </div>
     </nav>

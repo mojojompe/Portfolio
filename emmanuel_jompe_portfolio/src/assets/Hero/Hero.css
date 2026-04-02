@@ -137,7 +137,7 @@
   font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: -1px;
-  color: #bcbcbc;
+  color: #ffffff;
   /* Pure White for Name */
 }
 
@@ -151,7 +151,7 @@
 .rotating-skills {
   font-family: var(--font-sans);
   font-size: 1.5rem;
-  color: #d4d4d8;
+  color: #ffffff;
   /* Light Grey */
   height: 40px;
   display: flex;
@@ -162,7 +162,7 @@
 }
 
 .dynamic-text {
-  color: #ffffff;
+  color: #000000;
   font-weight: 600;
   animation: slideUp 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }

@@ -1,5 +1,5 @@
 import "./About.css";
-import ScrollStack, { ScrollStackItem } from "../../components/ScrollStack";
+import { useState, useEffect } from "react";
 import { AiBrain03Icon } from "hugeicons-react"; // User request for Ai icon
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { FaNetworkWired, FaTerminal, FaCode } from "react-icons/fa6";
@@ -28,6 +28,23 @@ import {
 } from "react-icons/si";
 
 const About = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const services = [
+    { title: "Software Engineering", desc: "Creation and management of modern software systems using robust architecture.", img: "/Software Engineering.png", Icon: FaTerminal },
+    { title: "Cross-Platform Dev", desc: "Seamless web, mobile, and desktop applications with intuitive UX.", img: "/Cross Platform Development.png", Icon: MdDevices },
+    { title: "Networking & Security", desc: "Setup, monitoring, and vulnerability management ensuring system safety.", img: "/Network and Security.png", Icon: FaNetworkWired },
+    { title: "Mentorship", desc: "Personalized software development training and technical guidance.", img: "/Mentorship.png", Icon: FaChalkboardTeacher },
+    { title: "Artificial Intelligence", desc: "Integrating AI solutions to solve complex problems.", img: "/Artificial Intelligence.png", Icon: AiBrain03Icon },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % services.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [services.length]);
+
   const techStack = {
     frontend: [
       { name: "HTML5", icon: SiHtml5 },
@@ -72,50 +89,35 @@ const About = () => {
         {/* Services / Overview */}
         <div className="about-intro">
           <h2 className="section-title">Overview</h2>
-          <div className="services-scroll-wrapper">
-            <ScrollStack itemDistance={50} stackPosition="15%" scaleEndPosition="10%">
-              
-              <ScrollStackItem>
-                <article className="service-card glass-card" style={{ backgroundImage: "url('/Software Engineering.png')" }}>
-                  <FaTerminal size={40} className="service-icon" />
-                  <h3>Software Engineering</h3>
-                  <p>Creation and management of modern software systems using robust architecture.</p>
-                </article>
-              </ScrollStackItem>
+          
+          <div className="carousel-container">
+            <div className="carousel-track-container">
+              <div 
+                className="carousel-track" 
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {services.map((svc, idx) => (
+                  <div key={idx} className="carousel-slide">
+                    <article className="service-card glass-card" style={{ backgroundImage: `url('${svc.img}')` }}>
+                      <svc.Icon size={40} className="service-icon" />
+                      <h3>{svc.title}</h3>
+                      <p>{svc.desc}</p>
+                    </article>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-              <ScrollStackItem>
-                <article className="service-card glass-card" style={{ backgroundImage: "url('/Cross Platform Development.png')" }}>
-                  <MdDevices size={40} className="service-icon" />
-                  <h3>Cross-Platform Dev</h3>
-                  <p>Seamless web, mobile, and desktop applications with intuitive UX.</p>
-                </article>
-              </ScrollStackItem>
-
-              <ScrollStackItem>
-                <article className="service-card glass-card" style={{ backgroundImage: "url('/Network and Security.png')" }}>
-                  <FaNetworkWired size={40} className="service-icon" />
-                  <h3>Networking & Security</h3>
-                  <p>Setup, monitoring, and vulnerability management ensuring system safety.</p>
-                </article>
-              </ScrollStackItem>
-
-              <ScrollStackItem>
-                <article className="service-card glass-card" style={{ backgroundImage: "url('/Mentorship.png')" }}>
-                  <FaChalkboardTeacher size={40} className="service-icon" />
-                  <h3>Mentorship</h3>
-                  <p>Personalized software development training and technical guidance.</p>
-                </article>
-              </ScrollStackItem>
-
-              <ScrollStackItem>
-                <article className="service-card glass-card" style={{ backgroundImage: "url('/Artificial Intelligence.png')" }}>
-                  <AiBrain03Icon size={40} className="service-icon" />
-                  <h3>Artificial Intelligence</h3>
-                  <p>Integrating AI solutions to solve complex problems.</p>
-                </article>
-              </ScrollStackItem>
-
-            </ScrollStack>
+            <div className="carousel-dots">
+                {services.map((_, idx) => (
+                    <button 
+                        key={idx} 
+                        className={`dot ${currentSlide === idx ? 'active' : ''}`}
+                        onClick={() => setCurrentSlide(idx)}
+                        aria-label={`Go to slide ${idx + 1}`}
+                    />
+                ))}
+            </div>
           </div>
         </div>
 
