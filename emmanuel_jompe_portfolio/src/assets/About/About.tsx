@@ -34,6 +34,7 @@ const About = () => {
       { name: "CSS3", icon: SiCss3 },
       { name: "JavaScript", icon: SiJavascript },
       { name: "TypeScript", icon: SiTypescript },
+      { name: "React", icon: SiReact },
     ],
     backend: [
       { name: "Node.js", icon: SiNodedotjs },

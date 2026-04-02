@@ -36,7 +36,7 @@
   top: 1rem;
   padding: 0.75rem 2rem;
   /* Reduced padding */
-  width: min(90%, 700px);
+  width: min(60%, 600px);
 }
 
 .nav.sticky .nav-glass-bg,

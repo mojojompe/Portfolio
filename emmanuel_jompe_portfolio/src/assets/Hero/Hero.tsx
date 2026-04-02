@@ -26,7 +26,7 @@ const Hero = () => {
   }, [skills.length]);
 
   const [typewriterText, setTypewriterText] = useState("");
-  const fullText = "Crafting scalable systems and innovative solutions. Bridging the gap between complex backend logic and intuitive frontend experiences.";
+  const fullText = "Crafting scalable systems and innovative solutions.";
 
   useEffect(() => {
     let index = 0;
@@ -37,7 +37,7 @@ const Hero = () => {
       } else {
         clearInterval(typeInterval);
       }
-    }, 30);
+    }, 80);
     return () => clearInterval(typeInterval);
   }, []);
 
@@ -57,7 +57,7 @@ const Hero = () => {
 
   return (
     <header id="hero" className="site-hero" ref={heroRef}>
-      <div className="hero-bg" ref={bgRef} style={{ backgroundImage: `url('/Official.jpg')` }}></div>
+      <div className="hero-bg" ref={bgRef} style={{ backgroundImage: `url('/Black Grid.jpg')` }}></div>
       <div className="hero-overlay"></div>
 
       <div className="hero-inner">

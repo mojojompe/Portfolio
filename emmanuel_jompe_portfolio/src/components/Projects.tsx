@@ -106,6 +106,36 @@ const projectsData: Project[] = [
 
     // ML
     {
+        id: "homeprediction",
+        category: "ML",
+        title: "Lagos State Home Price Prediction Model",
+        description: "A Regression Model built with Random Forest to estimate real estate prices in Lagos based on property features.",
+        image: "/Home Prediction.png",
+        link: "https://github.com/mojojompe/",
+        github: "https://github.com/mojojompe/",
+        tech: ["Python", "Random Forest", "Regression"],
+    },
+    {
+        id: "loanapprover",
+        category: "ML",
+        title: "Loan Approver Model",
+        description: "A Classification Model utilizing Random Forest to determine if a loan application should be approved or denied.",
+        image: "/Loan Approver.png",
+        link: "https://github.com/mojojompe/",
+        github: "https://github.com/mojojompe/",
+        tech: ["Python", "Random Forest", "Classification"],
+    },
+    {
+        id: "tips",
+        category: "ML",
+        title: "Restaurant Tips Prediction Model",
+        description: "A Machine Learning Model  built to predict the amount a customer Tips.",
+        image: "/Tips.png",
+        link: "https://github.com/mojojompe/",
+        github: "https://github.com/mojojompe/",
+        tech: ["Python", ""],
+    },
+    {
         id: "creditscoring",
         category: "ML",
         title: "Credit Scoring Model",
@@ -132,7 +162,7 @@ const projectsData: Project[] = [
         description: "Deep learning project for recognizing handwritten characters using CNNs.",
         image: "/Character Recognition Code.png",
         link: "https://github.com/mojojompe/",
-        tech: ["CNN", "Deep Learning"],
+        tech: ["CNN", "Deep Learning", "Tensorflow"],
     },
 
     // CLI
