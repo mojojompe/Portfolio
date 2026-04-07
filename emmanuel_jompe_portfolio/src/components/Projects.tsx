@@ -19,6 +19,16 @@ interface Project {
 const projectsData: Project[] = [
     // Web
     {
+        id: "Model-dashboard",
+        category: "Web",
+        title: "Loan Approver and Home Prediction Dashboard",
+        description: "The Frontend Dashboard for the Loan Approver and Home Prediction Models that predicts house prices and loan approvals using Classification and Regression",
+        image: "/Model Dashboard.png",
+        link: "https://github.com/mojojompe",
+        github: "https://github.com/mojojompe/SQI-Ai",
+        tech: ["Python", "Django", "Html5", "CSS3"],
+    },
+    {
         id: "reportam",
         category: "Web",
         title: "ReportAm",
@@ -111,8 +121,8 @@ const projectsData: Project[] = [
         title: "Lagos State Home Price Prediction Model",
         description: "A Regression Model built with Random Forest to estimate real estate prices in Lagos based on property features.",
         image: "/Home Prediction.png",
-        link: "https://github.com/mojojompe/",
-        github: "https://github.com/mojojompe/",
+        link: "https://www.kaggle.com/models/emmanueljompe/lagos-state-house-price-prediction",
+        github: "https://github.com/mojojompe/SQI-Ai",
         tech: ["Python", "Random Forest", "Regression"],
     },
     {
@@ -121,8 +131,8 @@ const projectsData: Project[] = [
         title: "Loan Approver Model",
         description: "A Classification Model utilizing Random Forest to determine if a loan application should be approved or denied.",
         image: "/Loan Approver.png",
-        link: "https://github.com/mojojompe/",
-        github: "https://github.com/mojojompe/",
+        link: "https://www.kaggle.com/models/emmanueljompe/loan-approver-model",
+        github: "https://github.com/mojojompe/SQI-Ai",
         tech: ["Python", "Random Forest", "Classification"],
     },
     {
@@ -131,9 +141,9 @@ const projectsData: Project[] = [
         title: "Restaurant Tips Prediction Model",
         description: "A Machine Learning Model  built to predict the amount a customer Tips.",
         image: "/Tips.png",
-        link: "https://github.com/mojojompe/",
-        github: "https://github.com/mojojompe/",
-        tech: ["Python", ""],
+        link: "https://www.kaggle.com/models/emmanueljompe/restaurant-tips-prediction",
+        github: "https://github.com/mojojompe/SQI-Ai",
+        tech: ["Python", "Scikit-learn", "Regression"],
     },
     {
         id: "creditscoring",
@@ -141,9 +151,9 @@ const projectsData: Project[] = [
         title: "Credit Scoring Model",
         description: "A machine learning model designed to predict creditworthiness based on applicant data.",
         image: "/Credit Scoring Code.png",
-        link: "https://github.com/mojojompe/",
-        github: "https://github.com/mojojompe/",
-        tech: ["Python", "Scikit-learn"],
+        link: "/",
+        github: "https://github.com/mojojompe/CodeAlpha_Tasks",
+        tech: ["Python", "Scikit-learn", "Random Forest"],
     },
     {
         id: "diseasepred",
@@ -151,8 +161,8 @@ const projectsData: Project[] = [
         title: "Disease Prediction Model",
         description: "A disease prediction system utilizing ensemble learning techniques.",
         image: "/Disease Prediction Code.png",
-        link: "https://github.com/mojojompe/",
-        github: "https://github.com/mojojompe/",
+        link: "/",
+        github: "https://github.com/mojojompe/CodeAlpha_Tasks",
         tech: ["Ensemble Learning", "Python"],
     },
     {
@@ -161,19 +171,30 @@ const projectsData: Project[] = [
         title: "Handwritten Character Recognition Model",
         description: "Deep learning project for recognizing handwritten characters using CNNs.",
         image: "/Character Recognition Code.png",
-        link: "https://github.com/mojojompe/",
+        link: "/",
+        github: "https://github.com/mojojompe/CodeAlpha_Tasks",
         tech: ["CNN", "Deep Learning", "Tensorflow"],
     },
 
     // CLI
+    {
+        id: "bank-cli",
+        category: "CLI",
+        title: "Bank Management System",
+        description: "A command line interface for a bank. Allows users to create accounts, deposit, withdraw, and transfer funds.",
+        image: "/Bank CLI.png",
+        link: "https://github.com/mojojompe",
+        github: "https://github.com/mojojompe",
+        tech: ["Python", "SQL", "OOP"],
+    },
     {
         id: "ayla",
         category: "CLI",
         title: "AYLA Voice Assistant",
         description: "Voice assistant using pyttsx3 and Speech Recognition. Performs actions and speaks responses.",
         image: "/AYLA Voice Assistant.png",
-        link: "https://github.com/mojojompe",
-        github: "https://github.com/mojojompe",
+        link: "https://github.com/mojojompe/Voice-Assistant-Demo",
+        github: "https://github.com/mojojompe/Voice-Assistant-Demo",
         tech: ["Python", "pyttsx3"],
     },
     {
@@ -182,8 +203,8 @@ const projectsData: Project[] = [
         title: "Facial Recognition Software",
         description: "Uses Tkinter GUI for face-recognition attendance. Implements image capture, training and live tracking.",
         image: "/FR Software.png",
-        link: "https://github.com/mojojompe",
-        github: "https://github.com/mojojompe",
+        link: "https://github.com/mojojompe/PYTHON",
+        github: "https://github.com/mojojompe/PYTHON",
         tech: ["OpenCV", "Tkinter", "Pandas"],
     },
     {
@@ -192,9 +213,9 @@ const projectsData: Project[] = [
         title: "Clinic Management System",
         description: "Comprehensive CLI-based Clinic Management System featuring patient and doctor management.",
         image: "/CLI code.png", 
-        link: "https://github.com/mojojompe",
-        github: "https://github.com/mojojompe",
-        tech: ["Python", "CLI"],
+        link: "https://github.com/mojojompe/Clinic-Management-System",
+        github: "https://github.com/mojojompe/Clinic-Management-System",
+        tech: ["Python", "Sqlite", "OOP"],
     }
 ];
 
