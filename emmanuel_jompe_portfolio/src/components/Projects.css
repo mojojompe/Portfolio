@@ -56,21 +56,25 @@
     max-width: 500px;
     margin: 0 auto;
 
-    /* Overview Card Styles */
-    background: white;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
+    /* Enhanced Card Styles - Premium Glass/Clay */
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 24px;
     padding: 1.5rem;
-    /* Added padding inside card for containment */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+        0 10px 30px -10px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-card-modern:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 20px 40px -10px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 .project-img-container {
@@ -419,22 +423,18 @@
         /* Add horizontal padding and reduce vertical padding on mobile */
     }
 
-    .project-img-container {
-        height: 250px;
+    .projects-grid {
+        grid-template-columns: 1fr; /* Force 1 column on mobile */
+        gap: 2rem;
     }
 
-    .proj-stack-item {
-        /* Wider cards on mobile */
-        min-width: 85vw;
+    .project-img-container {
+        height: 220px; /* Slightly smaller image on mobile to save space */
     }
 
     .project-card-modern {
-        background: var(--bg-light);
-        /* Ensure card has background since section is white? Or maybe card should be white on grey section */
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        border-radius: 24px;
-        padding: 1rem;
-        /* Add padding inside card */
+        padding: 1.25rem;
+        border-radius: 20px;
     }
 
     .modal-overlay-content {

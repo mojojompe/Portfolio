@@ -303,7 +303,7 @@ const Projects = () => {
                 {mounted && selectedProject && createPortal(
                     <div className="project-modal-overlay active" data-lenis-prevent>
                         <div className="project-modal-backdrop" onClick={closeModal}></div>
-                        <div className="project-modal-content" style={{ backgroundImage: `url(${selectedProject.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                        <div className="project-modal-content" style={{ backgroundImage: `url("${selectedProject.image}")`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             <div className="modal-dark-overlay"></div>
 
                             <button className="close-modal" onClick={closeModal}>

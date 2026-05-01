@@ -115,7 +115,7 @@ img {
 
 @media (max-width: 768px) {
   .section {
-    padding: 100px 1.5rem;
+    padding: 60px 1.25rem;
     /* Increased top padding and safe side padding */
   }
 }

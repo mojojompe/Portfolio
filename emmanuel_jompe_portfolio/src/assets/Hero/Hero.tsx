@@ -57,7 +57,7 @@ const Hero = () => {
 
   return (
     <header id="hero" className="site-hero" ref={heroRef}>
-      <div className="hero-bg" ref={bgRef} style={{ backgroundImage: `url('/Black Grid.jpg')` }}></div>
+      <div className="hero-bg css-grid-bg" ref={bgRef}></div>
       <div className="hero-overlay"></div>
 
       <div className="hero-inner">

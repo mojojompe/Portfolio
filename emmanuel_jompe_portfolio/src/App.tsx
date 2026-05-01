@@ -10,6 +10,8 @@ import Experience from "./components/Experience";
 import Contact from "./assets/Contact/Contact";
 import Footer from "./assets/Footer/Footer";
 import Chatbot from "./components/Chatbot";
+import Services from "./components/Services";
+import GithubActivity from "./components/GithubActivity";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -69,6 +71,8 @@ function App() {
         <Hero />
         <AboutMe />
         <About />
+        <Services />
+        <GithubActivity />
         <Projects />
         <Experience />
         <Contact />

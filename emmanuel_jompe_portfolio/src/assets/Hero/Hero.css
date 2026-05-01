@@ -22,7 +22,14 @@
   background-size: cover;
   background-position: center;
   z-index: -2;
-  /* Removed brightness filter per user request */
+}
+
+.css-grid-bg {
+  background-color: #000000;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
 .hero-overlay {
@@ -33,23 +40,10 @@
   width: 100%;
   height: 100%;
   background: rgba(250, 250, 250, 0.2);
-  /* Very light overlay */
-  /* Reduced opacity to show image */
-  backdrop-filter: blur(3px);
   z-index: -1;
 }
 
-.site-hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(to top, var(--bg-light), transparent);
-  z-index: 0;
-  pointer-events: none;
-}
+
 
 .hero-inner {
   max-width: 1200px;
@@ -135,7 +129,8 @@
 .hero-name {
   font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
   letter-spacing: -1px;
   color: #ffffff;
   /* Pure White for Name */
@@ -158,11 +153,11 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .dynamic-text {
-  color: #000000;
+  color: #a1a1aa;
   font-weight: 600;
   animation: slideUp 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -184,7 +179,7 @@
   max-width: 600px;
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 /* Buttons */
