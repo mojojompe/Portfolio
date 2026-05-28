@@ -63,8 +63,8 @@ const Hero = () => {
       <div className="hero-inner">
         <div className="hero-content" data-aos="fade-up">
 
-          <h1 className="hero-name">
-            Emmanuel Ayomiposi Jompe
+          <h1 className="hero-name magazine-title">
+            JOMPE EMMANUEL AYOMIPOSI
           </h1>
 
           <div className="rotating-skills">

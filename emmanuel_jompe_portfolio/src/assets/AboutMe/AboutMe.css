@@ -1,80 +1,104 @@
 .about-me-section {
     padding: 100px 0;
     position: relative;
-    background-image: url('/Main Backdrop.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: var(--bg-light); /* Clean background */
     overflow: hidden;
 }
 
-.about-me-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
 .about-me-container {
-    position: relative;
-    z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 500px;
+}
+
+.about-me-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-me-header {
+    position: sticky;
+    top: 100px;
 }
 
 .about-me-section .section-title {
-    color: #000000 !important;
+    color: var(--text-primary) !important;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.accent-line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent);
+    border-radius: 2px;
 }
 
 .about-me-content {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 600px;
-}
-
-.section-title.left-align {
-    text-align: left;
-    margin-bottom: 1rem;
+    gap: 2rem;
 }
 
 .about-me-text {
-    font-size: 1.1rem;
     line-height: 1.8;
-    color: #333333;
+}
+
+.highlight-text {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.secondary-text {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+}
+
+.stats-row {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border-dark);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-num {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
     font-weight: 500;
 }
 
 @media (max-width: 900px) {
-    .about-me-overlay {
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 60%, rgba(255, 255, 255, 0.3) 100%);
+    .about-me-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
-
-    .about-me-container {
-        min-height: auto;
-        padding: 4rem 1.25rem;
+    
+    .about-me-header {
+        position: static;
     }
-
-    .about-me-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .about-me-section {
-        padding: 0;
-        background-attachment: scroll;
-    }
-
-    .section-title.left-align {
-        text-align: center;
+    
+    .stats-row {
+        flex-wrap: wrap;
+        gap: 2rem;
     }
 }

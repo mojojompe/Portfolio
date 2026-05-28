@@ -27,8 +27,9 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="experience-section">
-            <div className="section-container">
+        <section id="experience" className="experience-section" style={{ position: 'relative' }}>
+            <div className="grey-grid-bg" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
+            <div className="section-container" style={{ position: 'relative', zIndex: 1 }}>
                 <h2 className="section-title">Experience & Education</h2>
 
                 <div className="timeline">

@@ -10,12 +10,31 @@ import Experience from "./components/Experience";
 import Contact from "./assets/Contact/Contact";
 import Footer from "./assets/Footer/Footer";
 import Chatbot from "./components/Chatbot";
-import Services from "./components/Services";
 import GithubActivity from "./components/GithubActivity";
+import TechNews from "./components/TechNews/TechNews";
+import ProjectDetail from "./pages/ProjectDetail";
+import { Routes, Route, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+function PortfolioHome() {
+  return (
+    <>
+      <Hero />
+      <AboutMe />
+      <About />
+      <GithubActivity />
+      <Projects />
+      <Experience />
+      <TechNews />
+      <Contact />
+    </>
+  );
+}
+
 function App() {
+  const location = useLocation();
+
   useEffect(() => {
     // Initialize AOS
     AOS.init({
@@ -66,16 +85,12 @@ function App() {
 
   return (
     <div className="app-container">
-      <Navbar />
+      {location.pathname === "/" && <Navbar />}
       <main>
-        <Hero />
-        <AboutMe />
-        <About />
-        <Services />
-        <GithubActivity />
-        <Projects />
-        <Experience />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<PortfolioHome />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
+        </Routes>
       </main>
       <Footer />
       <Chatbot />

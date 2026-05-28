@@ -1,0 +1,222 @@
+export interface Project {
+    id: string;
+    category: "Web" | "Mobile" | "AI" | "ML" | "CLI";
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+    github?: string;
+    tech: string[];
+}
+
+export const projectsData: Project[] = [
+    // Web
+    {
+        id: "ilesure",
+        category: "Web",
+        title: "ilesure Website",
+        description: "The Website and Web Application for an Apartment Listing Platform in Ibadan, Nigeria. This robust platform enables property owners to list their apartments and helps home seekers find ideal living spaces effortlessly. Built with Next.js and integrated with comprehensive search and filtering capabilities, it features modern glassmorphism styling and smooth GSAP animations for a premium user experience.",
+        image: "/ilesure.png",
+        link: "https://ilesure.com",
+        github: "https://github.com/mojojompe/",
+        tech: ["Next.js", "TailwindCss", "TypeScript", "Gsap"],
+    },
+    {
+        id: "Model-dashboard",
+        category: "Web",
+        title: "Loan Approver and Home Prediction Dashboard",
+        description: "The Frontend Dashboard for the Loan Approver and Home Prediction Models that predicts house prices and loan approvals using Classification and Regression. It serves as an intuitive interface connecting end-users to complex machine learning APIs in the backend. Users can input specific property details or financial metrics to instantly receive real-time evaluations and data-driven insights.",
+        image: "/Model Dashboard.png",
+        link: "https://github.com/mojojompe",
+        github: "https://github.com/mojojompe/SQI-Ai",
+        tech: ["Python", "Django", "Html5", "CSS3"],
+    },
+    {
+        id: "reportam",
+        category: "Web",
+        title: "ReportAm",
+        description: "A web app where residents report and track community problems in Oyo State, Nigeria. Built with a focus on civic engagement, this platform uses real-time updates and interactive maps to keep both citizens and government officials informed of reported issues and their resolution status.",
+        image: "/Reportam.png",
+        link: "https://reportam.vercel.app",
+        github: "https://github.com/mojojompe/Reportam",
+        tech: ["Next.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    },
+    {
+        id: "medicare",
+        category: "Web",
+        title: "MediCare",
+        description: "Digital healthcare platform bridging the gap between healthcare providers and patients. Features include appointment scheduling, virtual consultations, secure patient records, and real-time chat functionality, all wrapped in a sleek, accessible user interface.",
+        image: "/Medicare.png",
+        link: "https://medicare-home.vercel.app",
+        github: "https://github.com/mojojompe/Medicare",
+        tech: ["TypeScript", "React", "Node.js", "Express.js"],
+    },
+    {
+        id: "campus-tech",
+        category: "Web",
+        title: "Campus Tech Group",
+        description: "Built the frontend of a student collaboration portal using HTML, CSS and JavaScript. This project focuses on pure frontend optimization, responsive design, and providing an accessible platform for university students to share resources and collaborate on assignments.",
+        image: "/CampusTech.png",
+        link: "https://campus-tech-group.vercel.app/",
+        github: "https://github.com/mojojompe/Campus-Tech",
+        tech: ["HTML", "CSS", "JS"],
+    },
+    {
+        id: "goftem",
+        category: "Web",
+        title: "Goftem Stores",
+        description: "Built with Next.js, MongoDB, Express.js and Node.js. Allows users to browse products, make payments and track orders. It includes an integrated admin dashboard for inventory management, dynamic product routing, and secure Stripe payment processing.",
+        image: "/Goftem.png",
+        link: "https://goftemstores.vercel.app",
+        github: "https://github.com/mojojompe",
+        tech: ["Next.js", "MongoDB", "Express", "Node.js"],
+    },
+
+    // Mobile
+    {
+        id: "eduplanner",
+        category: "Mobile",
+        title: "EduPlanner",
+        description: "Student productivity app built with React Native, Node.js and MongoDB to help students organize tasks. Features customizable daily schedules, assignment reminders, and analytics to track study progress. Offline-first architecture ensures it works without internet access.",
+        image: "/Eduplanner.jpg",
+        link: "https://edu-planner-home.vercel.app",
+        github: "https://github.com/mojojompe",
+        tech: ["React Native", "Node.js", "MongoDB", "Firebase"],
+    },
+
+    // AI
+    {
+        id: "outbreakiq",
+        category: "AI",
+        title: "OutbreakIQ",
+        description: "AI powered health Intelligence system that tracks, monitors and predicts disease outbreaks across Nigeria. Processes massive datasets from various health agencies to visualize outbreak hotspots and predict spread trajectories using deep learning algorithms.",
+        image: "/OutbreakIQ.png",
+        link: "https://github.com/mojojompe/",
+        github: "https://github.com/folabas/",
+        tech: ["Numpy", "Tensorflow", "Next.js"],
+    },
+    {
+        id: "finalytics",
+        category: "AI",
+        title: "Finalytics",
+        description: "Real time market visualisation and Ai powered price predictions using LSTM neural networks. Provides traders with actionable insights, sentiment analysis from financial news, and highly accurate forecasting models for stock and crypto markets.",
+        image: "/Finalytics.png",
+        link: "https://market-finalytics.vercel.app",
+        github: "https://github.com/mojojompe/finalytics",
+        tech: ["LSTM", "Python", "React"],
+    },
+    {
+        id: "saferoute",
+        category: "AI",
+        title: "Safe Route Ai",
+        description: "Helps users choose safer walking and driving routes by scoring paths based on risk and environment. Combines historical crime data, real-time lighting information, and pedestrian density to generate the optimal safe route, completely integrated with Mapbox.",
+        image: "/SafeRoute.png",
+        link: "https://safe-route-ai.vercel.app",
+        github: "https://github.com/mojojompe/Safe-Route-Ai",
+        tech: ["React", "Node.js", "Raindrop API", "Mapbox", "MongoDB"],
+    },
+
+    // ML
+    {
+        id: "homeprediction",
+        category: "ML",
+        title: "Lagos State Home Price Prediction Model",
+        description: "A Regression Model built with Random Forest to estimate real estate prices in Lagos based on property features. Trained on scraped housing data, the model accounts for location, amenities, and market trends to deliver highly accurate property valuations.",
+        image: "/Home Prediction.png",
+        link: "https://www.kaggle.com/models/emmanueljompe/lagos-state-house-price-prediction",
+        github: "https://github.com/mojojompe/SQI-Ai",
+        tech: ["Python", "Random Forest", "Regression"],
+    },
+    {
+        id: "loanapprover",
+        category: "ML",
+        title: "Loan Approver Model",
+        description: "A Classification Model utilizing Random Forest to determine if a loan application should be approved or denied. Evaluates credit history, income, and debt-to-income ratios to mitigate risk for financial institutions while ensuring fair lending practices.",
+        image: "/Loan Approver.png",
+        link: "https://www.kaggle.com/models/emmanueljompe/loan-approver-model",
+        github: "https://github.com/mojojompe/SQI-Ai",
+        tech: ["Python", "Random Forest", "Classification"],
+    },
+    {
+        id: "tips",
+        category: "ML",
+        title: "Restaurant Tips Prediction Model",
+        description: "A Machine Learning Model built to predict the amount a customer Tips. Uses variables such as bill total, day of the week, and party size to output expected gratuity, demonstrating core regression concepts in scikit-learn.",
+        image: "/Tips.png",
+        link: "https://www.kaggle.com/models/emmanueljompe/restaurant-tips-prediction",
+        github: "https://github.com/mojojompe/SQI-Ai",
+        tech: ["Python", "Scikit-learn", "Regression"],
+    },
+    {
+        id: "creditscoring",
+        category: "ML",
+        title: "Credit Scoring Model",
+        description: "A machine learning model designed to predict creditworthiness based on applicant data. Focuses on robust feature engineering and hyperparameter tuning to ensure accurate and unbiased scoring.",
+        image: "/Credit Scoring Code.png",
+        link: "/",
+        github: "https://github.com/mojojompe/CodeAlpha_Tasks",
+        tech: ["Python", "Scikit-learn", "Random Forest"],
+    },
+    {
+        id: "diseasepred",
+        category: "ML",
+        title: "Disease Prediction Model",
+        description: "A disease prediction system utilizing ensemble learning techniques. Analyzes patient symptoms and historical medical records to predict the likelihood of specific diseases, aiding doctors in early diagnosis.",
+        image: "/Disease Prediction Code.png",
+        link: "/",
+        github: "https://github.com/mojojompe/CodeAlpha_Tasks",
+        tech: ["Ensemble Learning", "Python"],
+    },
+    {
+        id: "charrecogn",
+        category: "ML",
+        title: "Handwritten Character Recognition Model",
+        description: "Deep learning project for recognizing handwritten characters using CNNs. Trained on the MNIST dataset and extended to custom handwriting, achieving over 98% accuracy on test data.",
+        image: "/Character Recognition Code.png",
+        link: "/",
+        github: "https://github.com/mojojompe/CodeAlpha_Tasks",
+        tech: ["CNN", "Deep Learning", "Tensorflow"],
+    },
+
+    // CLI
+    {
+        id: "bank-cli",
+        category: "CLI",
+        title: "Bank Management System",
+        description: "A command line interface for a bank. Allows users to create accounts, deposit, withdraw, and transfer funds securely. Implements a robust SQL database backend to ensure ACID compliance for all transactions.",
+        image: "/Bank CLI.png",
+        link: "https://github.com/mojojompe",
+        github: "https://github.com/mojojompe",
+        tech: ["Python", "SQL", "OOP"],
+    },
+    {
+        id: "ayla",
+        category: "CLI",
+        title: "AYLA Voice Assistant",
+        description: "Voice assistant using pyttsx3 and Speech Recognition. Performs actions and speaks responses, allowing users to open applications, search the web, and control system settings entirely via voice commands.",
+        image: "/AYLA Voice Assistant.png",
+        link: "https://github.com/mojojompe/Voice-Assistant-Demo",
+        github: "https://github.com/mojojompe/Voice-Assistant-Demo",
+        tech: ["Python", "pyttsx3"],
+    },
+    {
+        id: "facrec",
+        category: "CLI",
+        title: "Facial Recognition Software",
+        description: "Uses Tkinter GUI for face-recognition attendance. Implements image capture, training and live tracking to automate attendance logging for schools or offices.",
+        image: "/FR Software.png",
+        link: "https://github.com/mojojompe/PYTHON",
+        github: "https://github.com/mojojompe/PYTHON",
+        tech: ["OpenCV", "Tkinter", "Pandas"],
+    },
+    {
+        id: "clinic",
+        category: "CLI",
+        title: "Clinic Management System",
+        description: "Comprehensive CLI-based Clinic Management System featuring patient and doctor management. Handles appointment scheduling, prescription tracking, and generates detailed medical history reports.",
+        image: "/CLI code.png",
+        link: "https://github.com/mojojompe/Clinic-Management-System",
+        github: "https://github.com/mojojompe/Clinic-Management-System",
+        tech: ["Python", "Sqlite", "OOP"],
+    }
+];

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
+
 .site-hero {
   background-color: transparent;
   /* Transparent to let bg-image show */
@@ -133,7 +135,16 @@
   margin-top: 5rem;
   letter-spacing: -1px;
   color: #ffffff;
-  /* Pure White for Name */
+}
+
+.hero-name.magazine-title {
+  font-family: 'Oswald', 'Impact', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .text-gradient {

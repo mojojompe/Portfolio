@@ -4,21 +4,22 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
     const templateParams = {
-      to_email: email,
+      from_name: name,
+      reply_to: email,
+      message: message,
+      to_name: "Emmanuel",
       message_html: `
-      <div style = "font-family: Arial, sans-serif; padding: 1rem;">
-       <h2 style = "color: #058789;">  Thank You for contacting Me!! </h2>
-       <p> Hi There,</p>
-       <p> I appreciate your interest in my work. </p>
-       <br />
-       <p> I will get back to you as soon as possible. </p>
-       <p style = "font-style: italic;"> &copy; 2025 Emmanuel Jompe. All rights reserved. </p>
+      <div style="font-family: Arial, sans-serif; padding: 1rem;">
+       <h2 style="color: #058789;">New Message from ${name} (${email})</h2>
+       <p>${message}</p>
       </div>
       `,
     };
@@ -33,6 +34,8 @@ const Contact = () => {
       .then(() => {
         setStatus("Email sent successfully!");
         setEmail("");
+        setName("");
+        setMessage("");
       })
       .catch(() => {
         setStatus("Failed to send email. Please try again later.");
@@ -66,7 +69,14 @@ const Contact = () => {
 
         <form className="contact-form" onSubmit={sendEmail}>
           <label htmlFor="name">Name</label>
-          <input id="name" name="name" placeholder="Your name" required />
+          <input 
+            id="name" 
+            name="name" 
+            placeholder="Your name" 
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required 
+          />
 
           <label htmlFor="email">Email</label>
           <input
@@ -80,7 +90,14 @@ const Contact = () => {
           />
 
           <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" rows={5} required />
+          <textarea 
+            id="message" 
+            name="message" 
+            rows={5} 
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required 
+          />
 
           <button className="send-btn" type="submit">
             Send message

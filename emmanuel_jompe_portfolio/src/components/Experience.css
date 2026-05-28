@@ -1,6 +1,15 @@
 .experience-section {
     padding: 80px 0;
     position: relative;
+    background-color: #ebebeb;
+}
+
+.grey-grid-bg {
+    background-color: #f5f5f7;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 1) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 1) 2px, transparent 2px);
+    background-size: 50px 50px;
 }
 
 .experience-section .section-title {
@@ -70,7 +79,7 @@
 }
 
 .timeline-content:hover {
-    border-color: var(--accent);
+    border-color: whitesmoke;
 }
 
 .timeline-date {
