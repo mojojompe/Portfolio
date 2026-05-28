@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
-import { projectsData, type Project } from "../data/projectsData";
+import { projectsData } from "../data/projectsData";
 import "./Projects.css";
 
 const categories = ["Web", "Mobile", "AI", "ML", "CLI"];
