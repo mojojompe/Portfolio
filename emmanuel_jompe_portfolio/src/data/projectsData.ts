@@ -13,10 +13,10 @@ export const projectsData: Project[] = [
     // Web
     {
         id: "ilesure",
-        category: "Web",
+        category: "Mobile",
         title: "ilesure Website",
         description: "The Website and Web Application for an Apartment Listing Platform in Ibadan, Nigeria. This robust platform enables property owners to list their apartments and helps home seekers find ideal living spaces effortlessly. Built with Next.js and integrated with comprehensive search and filtering capabilities, it features modern glassmorphism styling and smooth GSAP animations for a premium user experience.",
-        image: "/ilesure.png",
+        image: "/ilesure_app.png",
         link: "https://ilesure.com",
         github: "https://github.com/mojojompe/",
         tech: ["Next.js", "TailwindCss", "TypeScript", "Gsap"],
@@ -33,10 +33,10 @@ export const projectsData: Project[] = [
     },
     {
         id: "reportam",
-        category: "Web",
+        category: "Mobile",
         title: "ReportAm",
         description: "A web app where residents report and track community problems in Oyo State, Nigeria. Built with a focus on civic engagement, this platform uses real-time updates and interactive maps to keep both citizens and government officials informed of reported issues and their resolution status.",
-        image: "/Reportam.png",
+        image: "/ReportAm copy.png",
         link: "https://reportam.vercel.app",
         github: "https://github.com/mojojompe/Reportam",
         tech: ["Next.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
@@ -107,10 +107,10 @@ export const projectsData: Project[] = [
     },
     {
         id: "saferoute",
-        category: "AI",
+        category: "Mobile",
         title: "Safe Route Ai",
         description: "Helps users choose safer walking and driving routes by scoring paths based on risk and environment. Combines historical crime data, real-time lighting information, and pedestrian density to generate the optimal safe route, completely integrated with Mapbox.",
-        image: "/SafeRoute.png",
+        image: "/Safe Route Ai_app.png",
         link: "https://safe-route-ai.vercel.app",
         github: "https://github.com/mojojompe/Safe-Route-Ai",
         tech: ["React", "Node.js", "Raindrop API", "Mapbox", "MongoDB"],
