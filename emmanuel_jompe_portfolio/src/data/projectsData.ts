@@ -12,6 +12,15 @@ export interface Project {
 export const projectsData: Project[] = [
     // Web
     {
+        id: "elay-beauty",
+        category: "Web",
+        title: "ELAY Beauty",
+        description: "Premium hair braiding, natural styling, and children's care by EL.AY Beauty. Where artistry meets effortless booking.",
+        image: "/ELAY Beauty.png",
+        link: "https://elay-beauty.vercel.app/",
+        tech: ["React", "Tailwind CSS"],
+    },
+    {
         id: "ilesure",
         category: "Mobile",
         title: "ilesure Website",
