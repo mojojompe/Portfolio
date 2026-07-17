@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { MdArrowBack, MdArrowOutward } from 'react-icons/md';
+import { MdArrowBack, MdArrowOutward, MdWarning, MdLightbulb } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
 import { useEffect } from 'react';
 import { projectsData } from '../data/projectsData';
@@ -11,7 +11,7 @@ const ProjectDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [id]);
 
   if (!project) {
     return (
@@ -25,57 +25,72 @@ const ProjectDetail = () => {
   return (
     <div className="project-detail-page fade-in">
       <div className="project-hero" style={{ backgroundImage: `url("${project.image}")` }}>
-        <div className="hero-overlay"></div>
-        <div className="project-header">
-          <Link to="/" className="back-link glass-card-btn">
+        <div className="hero-blur-overlay"></div>
+        <div className="project-header-nav">
+          <Link to="/" className="back-link glass-btn">
             <MdArrowBack /> Back to Portfolio
           </Link>
         </div>
-        <div className="hero-content">
-          <span className="category-tag">{project.category}</span>
-          <h1 className="project-title">{project.title}</h1>
+        
+        <div className="hero-content-wrapper">
+            <div className="hero-text-content">
+                <span className="category-pill">{project.category}</span>
+                <h1 className="project-title-large">{project.title}</h1>
+                <div className="project-action-links">
+                    {project.link && (
+                    <a href={project.link} target="_blank" rel="noreferrer" className="btn-primary-action">
+                        View Live Project <MdArrowOutward />
+                    </a>
+                    )}
+                    {project.github && (
+                    <a href={project.github} target="_blank" rel="noreferrer" className="btn-secondary-action">
+                        <FaGithub /> Source Code
+                    </a>
+                    )}
+                </div>
+            </div>
+            <div className="hero-image-showcase">
+                <img src={project.image} alt={project.title} className="showcase-img" />
+            </div>
         </div>
       </div>
 
-      <div className="project-body section-container">
-        <div className="project-main">
+      <div className="project-bento-container section-container">
+        
+        <div className="bento-card overview-card glass-card">
           <h2>Overview</h2>
           <p className="project-description-full">{project.description}</p>
-          
-          <div className="project-links">
-            {project.link && (
-              <a href={project.link} target="_blank" rel="noreferrer" className="btn-primary">
-                View Live Project <MdArrowOutward />
-              </a>
-            )}
-            {project.github && (
-              <a href={project.github} target="_blank" rel="noreferrer" className="btn-secondary">
-                <FaGithub /> Source Code
-              </a>
-            )}
+        </div>
+
+        <div className="bento-card tech-card glass-card">
+          <h3>Technologies Used</h3>
+          <div className="tech-stack-list">
+            {project.tech.map((tech) => (
+              <span key={tech} className="tech-pill">{tech}</span>
+            ))}
           </div>
         </div>
 
-        <div className="project-sidebar">
-          <div className="sidebar-sticky-wrapper">
-            <div className="glass-card tech-stack-card">
-              <h3>Technologies Used</h3>
-              <div className="tech-stack-list">
-                {project.tech.map((tech) => (
-                  <span key={tech} className="tech-pill">{tech}</span>
-                ))}
-              </div>
+        {project.failures && (
+            <div className="bento-card failure-card glass-card">
+                <div className="card-header failure-header">
+                    <MdWarning size={24} />
+                    <h3>The Challenge</h3>
+                </div>
+                <p className="insight-text">{project.failures}</p>
             </div>
+        )}
 
-            <div className="glass-card lessons-card">
-              <h3>Failures & Lessons</h3>
-              <p>
-                {/* @ts-ignore - Fallback for missing lessons field */}
-                {project.lessons || "Key takeaways from this project involved optimizing rendering performance and ensuring strict type-safety across the application architecture. Debugging integration bottlenecks led to a highly robust, scalable end product."}
-              </p>
+        {project.lessons && (
+            <div className="bento-card lesson-card glass-card">
+                <div className="card-header lesson-header">
+                    <MdLightbulb size={24} />
+                    <h3>The Solution</h3>
+                </div>
+                <p className="insight-text">{project.lessons}</p>
             </div>
-          </div>
-        </div>
+        )}
+
       </div>
     </div>
   );

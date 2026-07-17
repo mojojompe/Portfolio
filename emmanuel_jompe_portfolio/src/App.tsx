@@ -5,6 +5,7 @@ import Navbar from "./assets/Navbar/Navbar";
 import Hero from "./assets/Hero/Hero";
 import About from "./assets/About/About";
 import AboutMe from "./assets/AboutMe/AboutMe";
+import PhotoWall from "./components/PhotoWall/PhotoWall";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./assets/Contact/Contact";
@@ -22,6 +23,7 @@ function PortfolioHome() {
     <>
       <Hero />
       <AboutMe />
+      <PhotoWall />
       <About />
       <GithubActivity />
       <Projects />

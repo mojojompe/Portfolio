@@ -1,5 +1,6 @@
 import "./About.css";
 import { useState, useEffect } from "react";
+import ScrollStack, { ScrollStackItem } from "../../components/ScrollStack";
 import { AiBrain03Icon } from "hugeicons-react"; // User request for Ai icon
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { FaNetworkWired, FaTerminal, FaCode } from "react-icons/fa6";
@@ -28,7 +29,7 @@ import {
 } from "react-icons/si";
 
 const About = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const services = [
     { title: "Software Engineering", desc: "Creation and management of modern software systems using robust architecture.", img: "/Software Engineering.png", Icon: FaTerminal },
@@ -39,11 +40,11 @@ const About = () => {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % services.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [services.length]);
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const techStack = {
     frontend: [
@@ -90,35 +91,31 @@ const About = () => {
         <div className="about-intro">
           <h2 className="section-title">Overview</h2>
           
-          <div className="carousel-container">
-            <div className="carousel-track-container">
-              <div 
-                className="carousel-track" 
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
+          {isMobile ? (
+            <div className="scroll-stack-wrapper">
+              <ScrollStack useWindowScroll={true} itemDistance={20} itemScale={0.05} stackPosition="15%" scaleEndPosition="10%">
                 {services.map((svc, idx) => (
-                  <div key={idx} className="carousel-slide">
-                    <article className="service-card glass-card" style={{ backgroundImage: `url('${svc.img}')` }}>
+                  <ScrollStackItem key={idx}>
+                    <article className="service-card glass-card scroll-card" style={{ backgroundImage: `url('${svc.img}')` }}>
                       <svc.Icon size={40} className="service-icon" />
                       <h3>{svc.title}</h3>
                       <p>{svc.desc}</p>
                     </article>
-                  </div>
+                  </ScrollStackItem>
                 ))}
-              </div>
+              </ScrollStack>
             </div>
-
-            <div className="carousel-dots">
-                {services.map((_, idx) => (
-                    <button 
-                        key={idx} 
-                        className={`dot ${currentSlide === idx ? 'active' : ''}`}
-                        onClick={() => setCurrentSlide(idx)}
-                        aria-label={`Go to slide ${idx + 1}`}
-                    />
-                ))}
+          ) : (
+            <div className="bento-grid">
+              {services.map((svc, idx) => (
+                <article key={idx} className={`service-card glass-card bento-item bento-item-${idx + 1}`} style={{ backgroundImage: `url('${svc.img}')` }}>
+                  <svc.Icon size={40} className="service-icon" />
+                  <h3>{svc.title}</h3>
+                  <p>{svc.desc}</p>
+                </article>
+              ))}
             </div>
-          </div>
+          )}
         </div>
 
         {/* Tech Stack - Marquee & Code Snippets */}

@@ -7,6 +7,8 @@ export interface Project {
     link: string;
     github?: string;
     tech: string[];
+    failures?: string;
+    lessons?: string;
 }
 
 export const projectsData: Project[] = [
@@ -19,6 +21,8 @@ export const projectsData: Project[] = [
         image: "/ELAY Beauty.png",
         link: "https://elay-beauty.vercel.app/",
         tech: ["React", "Tailwind CSS"],
+        failures: "Faced challenges optimizing high-resolution imagery for fast load times without sacrificing the premium visual aesthetic required for a beauty brand.",
+        lessons: "Mastered advanced image optimization and lazy loading techniques, significantly boosting performance scores while maintaining pristine visual fidelity."
     },
     {
         id: "ilesure",
@@ -29,6 +33,8 @@ export const projectsData: Project[] = [
         link: "https://ilesure.com",
         github: "https://github.com/mojojompe/",
         tech: ["Next.js", "TailwindCss", "TypeScript", "Gsap"],
+        failures: "Initially struggled with complex state management across search filters, leading to sluggish UI updates and animation stuttering.",
+        lessons: "Refactored global state handling and optimized component re-renders, ensuring the glassmorphism animations ran at a buttery-smooth 60fps."
     },
     {
         id: "Model-dashboard",
@@ -39,6 +45,8 @@ export const projectsData: Project[] = [
         link: "https://github.com/mojojompe",
         github: "https://github.com/mojojompe/SQI-Ai",
         tech: ["Python", "Django", "Html5", "CSS3"],
+        failures: "The backend ML APIs frequently timed out when processing dense financial metrics from multiple concurrent users.",
+        lessons: "Implemented asynchronous request polling and engaging frontend loading skeletons, keeping the UX responsive while models processed predictions."
     },
     {
         id: "reportam",
@@ -49,6 +57,8 @@ export const projectsData: Project[] = [
         link: "https://reportam.vercel.app",
         github: "https://github.com/mojojompe/Reportam",
         tech: ["Next.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+        failures: "Integrating real-time interactive maps caused severe memory leaks when rapidly navigating between different community reports.",
+        lessons: "Learned to properly clean up and unmount map instances, ensuring a stable and efficient geographical mapping experience."
     },
     {
         id: "medicare",
@@ -59,6 +69,8 @@ export const projectsData: Project[] = [
         link: "https://medicare-home.vercel.app",
         github: "https://github.com/mojojompe/Medicare",
         tech: ["TypeScript", "React", "Node.js", "Express.js"],
+        failures: "Real-time chat functionality experienced message drops during network latency spikes, risking crucial patient communication.",
+        lessons: "Built a robust client-side message queue with automatic retry logic to guarantee the delivery of vital doctor-patient interactions."
     },
     {
         id: "campus-tech",
@@ -69,6 +81,8 @@ export const projectsData: Project[] = [
         link: "https://campus-tech-group.vercel.app/",
         github: "https://github.com/mojojompe/Campus-Tech",
         tech: ["HTML", "CSS", "JS"],
+        failures: "Developing a strictly frontend architecture made reliable persistence of collaborative session data highly problematic.",
+        lessons: "Gained a deep understanding of browser storage limitations and engineered the UI to gracefully handle state hydration limits."
     },
     {
         id: "goftem",
@@ -79,6 +93,8 @@ export const projectsData: Project[] = [
         link: "https://goftemstores.vercel.app",
         github: "https://github.com/mojojompe",
         tech: ["Next.js", "MongoDB", "Express", "Node.js"],
+        failures: "The initial Stripe checkout integration occasionally triggered duplicate charge attempts when impatient users double-clicked the payment button.",
+        lessons: "Secured transactions by adding idempotency keys and strict frontend button debouncing to ensure flawless payment processing."
     },
 
     // Mobile
@@ -91,6 +107,8 @@ export const projectsData: Project[] = [
         link: "https://ilesure.com",
         github: "https://github.com/mojojompe/",
         tech: ["React Native", "Expo"],
+        failures: "Translating the web version's glassmorphism UI directly to React Native caused massive frame drops on older Android devices.",
+        lessons: "Engineered adaptive UI fallbacks that render lightweight visuals on lower-end devices while preserving the premium aesthetic on capable hardware."
     },
     {
         id: "reportam-app",
@@ -101,6 +119,8 @@ export const projectsData: Project[] = [
         link: "https://reportam.vercel.app",
         github: "https://github.com/mojojompe/Reportam",
         tech: ["React Native", "MongoDB"],
+        failures: "Handling offline submissions for rural community reports led to permanent data loss if the app was closed before regaining connection.",
+        lessons: "Architected a persistent local SQLite queue that automatically and silently syncs to MongoDB whenever network connectivity is restored."
     },
     {
         id: "saferoute-app",
@@ -111,6 +131,8 @@ export const projectsData: Project[] = [
         link: "https://safe-route-ai.vercel.app",
         github: "https://github.com/mojojompe/Safe-Route-Ai",
         tech: ["React Native", "Mapbox", "Expo"],
+        failures: "Continuously rendering heavy Mapbox data layers over prolonged navigation sessions rapidly drained device batteries.",
+        lessons: "Dramatically improved efficiency by clustering map markers and aggressively throttling geodata updates based on the user's velocity."
     },
     {
         id: "eduplanner",
@@ -121,6 +143,8 @@ export const projectsData: Project[] = [
         link: "https://edu-planner-home.vercel.app",
         github: "https://github.com/mojojompe",
         tech: ["React Native", "Node.js", "MongoDB", "Firebase"],
+        failures: "The offline-first synchronization engine occasionally produced destructive conflicts when syncing schedules across a student's phone and tablet.",
+        lessons: "Designed a precise timestamp-based conflict resolution algorithm to accurately and non-destructively merge multi-device database changes."
     },
 
     // AI
@@ -133,6 +157,8 @@ export const projectsData: Project[] = [
         link: "https://github.com/mojojompe/",
         github: "https://github.com/folabas/",
         tech: ["Numpy", "Tensorflow", "Next.js"],
+        failures: "Training the predictive deep learning model on massive nationwide health datasets initially took days, hindering rapid iteration.",
+        lessons: "Modernized the training pipeline to leverage distributed TensorFlow, drastically shrinking model convergence times and allowing agile updates."
     },
     {
         id: "finalytics",
@@ -143,6 +169,8 @@ export const projectsData: Project[] = [
         link: "https://market-finalytics.vercel.app",
         github: "https://github.com/mojojompe/finalytics",
         tech: ["LSTM", "Python", "React"],
+        failures: "The LSTM networks suffered from extreme overfitting on historical stock data, causing poor predictions on highly volatile trading days.",
+        lessons: "Introduced advanced dropout layers and fused the data stream with real-time NLP sentiment analysis to make the model resilient to market shocks."
     },
     {
         id: "saferoute",
@@ -153,6 +181,8 @@ export const projectsData: Project[] = [
         link: "https://safe-route-ai.vercel.app",
         github: "https://github.com/mojojompe/Safe-Route-Ai",
         tech: ["React", "Node.js", "Raindrop API", "Mapbox", "MongoDB"],
+        failures: "The risk-scoring algorithm weighed historical crime statistics too heavily, penalizing newly developed and heavily lit safe pathways.",
+        lessons: "Refined the heuristic by blending real-time environmental data—like street lighting—with history to generate perfectly balanced safety routes."
     },
 
     // ML
@@ -165,6 +195,8 @@ export const projectsData: Project[] = [
         link: "https://www.kaggle.com/models/emmanueljompe/lagos-state-house-price-prediction",
         github: "https://github.com/mojojompe/SQI-Ai",
         tech: ["Python", "Random Forest", "Regression"],
+        failures: "The Random Forest model struggled to generalize prices for extreme outliers, specifically luxury estates in rapidly gentrifying areas.",
+        lessons: "Applied a logarithmic transformation on the price target variable and engineered specific neighborhood trend features to drastically boost accuracy."
     },
     {
         id: "loanapprover",
@@ -175,6 +207,8 @@ export const projectsData: Project[] = [
         link: "https://www.kaggle.com/models/emmanueljompe/loan-approver-model",
         github: "https://github.com/mojojompe/SQI-Ai",
         tech: ["Python", "Random Forest", "Classification"],
+        failures: "The early classification model inadvertently demonstrated bias against certain demographic features that were tightly correlated with income levels.",
+        lessons: "Conducted rigorous feature importance analysis to strip out biased proxies, ensuring the model's decisions were both fair and regulatory compliant."
     },
     {
         id: "tips",
@@ -185,6 +219,8 @@ export const projectsData: Project[] = [
         link: "https://www.kaggle.com/models/emmanueljompe/restaurant-tips-prediction",
         github: "https://github.com/mojojompe/SQI-Ai",
         tech: ["Python", "Scikit-learn", "Regression"],
+        failures: "Basic linear regression entirely failed to capture the non-linear relationship between large party sizes and gratuity during weekend dinner rushes.",
+        lessons: "Upgraded to an ensemble approach and incorporated specific time-of-day feature engineering to successfully capture complex human tipping patterns."
     },
     {
         id: "creditscoring",
@@ -195,6 +231,8 @@ export const projectsData: Project[] = [
         link: "/",
         github: "https://github.com/mojojompe/CodeAlpha_Tasks",
         tech: ["Python", "Scikit-learn", "Random Forest"],
+        failures: "Hyperparameter tuning using exhaustive grid search was unbearably slow and consumed excessive computational resources.",
+        lessons: "Transitioned to RandomizedSearchCV and Bayesian optimization, yielding a superior model configuration in a mere fraction of the original computing time."
     },
     {
         id: "diseasepred",
@@ -205,6 +243,8 @@ export const projectsData: Project[] = [
         link: "/",
         github: "https://github.com/mojojompe/CodeAlpha_Tasks",
         tech: ["Ensemble Learning", "Python"],
+        failures: "The complex ensemble model acted as a 'black box', making medical professionals deeply hesitant to trust its unexplainable disease predictions.",
+        lessons: "Integrated SHAP (SHapley Additive exPlanations) to provide crystal-clear, interpretable feature contributions, which immediately drove clinical adoption."
     },
     {
         id: "charrecogn",
@@ -215,6 +255,8 @@ export const projectsData: Project[] = [
         link: "/",
         github: "https://github.com/mojojompe/CodeAlpha_Tasks",
         tech: ["CNN", "Deep Learning", "Tensorflow"],
+        failures: "The CNN severely overfitted to the pristine MNIST dataset, completely failing when tasked with recognizing messy, real-world custom handwriting.",
+        lessons: "Implemented aggressive data augmentation protocols (rotations, scaling, noise injection) to force the model to become highly robust against varied scripts."
     },
 
     // CLI
@@ -227,6 +269,8 @@ export const projectsData: Project[] = [
         link: "https://github.com/mojojompe",
         github: "https://github.com/mojojompe",
         tech: ["Python", "SQL", "OOP"],
+        failures: "Managing simultaneous transfers resulted in dangerous race conditions where user account balances updated incorrectly.",
+        lessons: "Enforced strict SQL transaction isolation levels and row-level locking to absolutely guarantee ACID compliance during concurrent operations."
     },
     {
         id: "ayla",
@@ -237,6 +281,8 @@ export const projectsData: Project[] = [
         link: "https://github.com/mojojompe/Voice-Assistant-Demo",
         github: "https://github.com/mojojompe/Voice-Assistant-Demo",
         tech: ["Python", "pyttsx3"],
+        failures: "The core speech recognition library struggled immensely with local accent variations, leading to incredibly frustrating command misinterpretations.",
+        lessons: "Configured adaptive energy thresholds and integrated a highly forgiving NLP parser to interpret and execute ambiguous voice inputs gracefully."
     },
     {
         id: "facrec",
@@ -247,6 +293,8 @@ export const projectsData: Project[] = [
         link: "https://github.com/mojojompe/PYTHON",
         github: "https://github.com/mojojompe/PYTHON",
         tech: ["OpenCV", "Tkinter", "Pandas"],
+        failures: "The facial recognition model was hypersensitive to ambient lighting, failing to authenticate users in dimly lit environments.",
+        lessons: "Engineered an automated preprocessing pipeline using OpenCV for real-time histogram equalization before feeding frames to the neural network."
     },
     {
         id: "clinic",
@@ -257,5 +305,7 @@ export const projectsData: Project[] = [
         link: "https://github.com/mojojompe/Clinic-Management-System",
         github: "https://github.com/mojojompe/Clinic-Management-System",
         tech: ["Python", "Sqlite", "OOP"],
+        failures: "The terminal interface grew overly complex, making it extremely difficult for non-technical clinic administrative staff to navigate.",
+        lessons: "Redesigned the command architecture around intuitive, numbered menus with failsafe validation prompts to guarantee a foolproof user experience."
     }
 ];

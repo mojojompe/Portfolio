@@ -1,0 +1,137 @@
+.photo-wall-section {
+  width: 100%;
+  height: 100vh; /* Full viewport height or set to a specific height */
+  max-height: 800px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-color, transparent);
+  padding: 2rem 0;
+}
+
+/* Fade Masks */
+.photo-wall-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  /* Top and bottom transparent-to-cream mask */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+.wall-col {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.wall-track {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Infinite Parallax Scrolling Animations */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    /* Translate upwards by 50% since we duplicate the list to loop it */
+    transform: translateY(-50%);
+  }
+}
+
+/* Different speeds for parallax effect */
+.anim-scroll-up {
+  animation: scrollUp 25s linear infinite;
+}
+
+.anim-scroll-up-fast {
+  animation: scrollUp 20s linear infinite;
+}
+
+.anim-scroll-up-slow {
+  animation: scrollUp 35s linear infinite;
+}
+
+/* Pause animation on hover */
+.wall-col:hover .wall-track {
+  animation-play-state: paused;
+}
+
+/* Magnetic Card Styling */
+.magnetic-card-wrapper {
+  position: relative;
+  width: 100%;
+  /* Force hardware acceleration and 3D context */
+  perspective: 1000px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.card-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  transform-style: preserve-3d;
+}
+
+.wall-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2; /* Sit above the pulse ring */
+}
+
+/* Avatar Pulse Ring (Mustard color) */
+.pulse-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  background-color: #eab308; /* Mustard/Amber */
+  z-index: 1;
+  pointer-events: none; /* Ignore mouse events */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .photo-wall-container {
+    gap: 1rem;
+  }
+  .wall-track {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hide the third column on very small screens to save space */
+  .wall-col:nth-child(3) {
+    display: none;
+  }
+}
