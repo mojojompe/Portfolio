@@ -29,6 +29,7 @@
 
 .react-activity-calendar {
     margin: 0 auto;
+    min-width: 750px; /* Force minimum width to trigger overflow scroll on mobile */
 }
 
 @media (max-width: 768px) {

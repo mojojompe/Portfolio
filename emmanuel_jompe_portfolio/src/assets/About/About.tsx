@@ -1,6 +1,5 @@
 import "./About.css";
 import { useState, useEffect } from "react";
-import ScrollStack, { ScrollStackItem } from "../../components/ScrollStack";
 import { AiBrain03Icon } from "hugeicons-react"; // User request for Ai icon
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { FaNetworkWired, FaTerminal, FaCode } from "react-icons/fa6";
@@ -83,36 +82,41 @@ const About = () => {
 
   const allIcons = Object.values(techStack).flat();
 
-  return (
-    <section id="about" className="me-about" data-aos="fade-up">
-      <div className="section-container">
+  const renderServiceCard = (svc: typeof services[0], className: string) => (
+    <article className={`service-card ${className}`}>
+      <img src={svc.img} alt={svc.title} className="service-card-img" loading="lazy" />
+      <div className="service-card-overlay"></div>
+      
+      <div className="service-card-content">
+        <svc.Icon size={32} className="service-icon" />
+        <h3>{svc.title}</h3>
+        <p>{svc.desc}</p>
+      </div>
+    </article>
+  );
 
-        {/* Services / Overview */}
+  return (
+    <div id="about" className="me-about fade-in">
+      <div className="section-container">
         <div className="about-intro">
           <h2 className="section-title">Overview</h2>
           
           {isMobile ? (
-            <div className="scroll-stack-wrapper">
-              <ScrollStack useWindowScroll={true} itemDistance={20} itemScale={0.05} stackPosition="15%" scaleEndPosition="10%">
-                {services.map((svc, idx) => (
-                  <ScrollStackItem key={idx}>
-                    <article className="service-card glass-card scroll-card" style={{ backgroundImage: `url('${svc.img}')` }}>
-                      <svc.Icon size={40} className="service-icon" />
-                      <h3>{svc.title}</h3>
-                      <p>{svc.desc}</p>
-                    </article>
-                  </ScrollStackItem>
+            <div className="overview-marquee-container">
+              <div className="overview-marquee-content">
+                {[...services, ...services].map((svc, idx) => (
+                  <div key={idx} className="marquee-card-wrapper">
+                    {renderServiceCard(svc, "marquee-item-card")}
+                  </div>
                 ))}
-              </ScrollStack>
+              </div>
             </div>
           ) : (
             <div className="bento-grid">
               {services.map((svc, idx) => (
-                <article key={idx} className={`service-card glass-card bento-item bento-item-${idx + 1}`} style={{ backgroundImage: `url('${svc.img}')` }}>
-                  <svc.Icon size={40} className="service-icon" />
-                  <h3>{svc.title}</h3>
-                  <p>{svc.desc}</p>
-                </article>
+                <div key={idx} className={`bento-item bento-item-${idx + 1}`}>
+                  {renderServiceCard(svc, "")}
+                </div>
               ))}
             </div>
           )}
@@ -147,7 +151,7 @@ const About = () => {
         </div>
 
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { MdArrowOutward } from "react-icons/md";
 import { projectsData } from "../data/projectsData";
 import "./Projects.css";
 
@@ -39,9 +38,9 @@ const Projects = () => {
                             className="project-card-modern"
                             style={{ '--index': index } as React.CSSProperties}
                         >
-                            <div className="project-img-container">
-                                <img src={project.image} alt={project.title} loading="lazy" />
-                            </div>
+                            <img src={project.image} alt={project.title} className="project-bg-img" loading="lazy" />
+                            <div className="project-gradient-overlay"></div>
+                            
                             <div className="project-info-modern">
                                 <h3>{project.title}</h3>
 
@@ -49,13 +48,15 @@ const Projects = () => {
                                     {project.tech.map(t => <span key={t} className="tech-pill">{t}</span>)}
                                 </div>
 
-                                <div className="project-actions" style={{ marginTop: "1rem" }}>
-                                    <Link to={`/project/${project.id}`} className="view-proj-btn">
-                                        View Case Study <MdArrowOutward />
+                                <div className="project-actions">
+                                    <Link to={`/project/${project.id}`} className="view-proj-btn btn-primary">
+                                        <span className="desktop-text">View Case Study</span>
+                                        <span className="mobile-text">More</span>
                                     </Link>
                                     {project.link && (
-                                        <a href={project.link} target="_blank" rel="noreferrer" className="direct-link">
-                                            Live Site
+                                        <a href={project.link} target="_blank" rel="noreferrer" className="view-proj-btn btn-secondary">
+                                            <span className="desktop-text">Live Site</span>
+                                            <span className="mobile-text">View</span>
                                         </a>
                                     )}
                                 </div>
