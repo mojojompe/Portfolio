@@ -1,0 +1,211 @@
+/* ── Services Section ─────────────────────────────────── */
+.services-section { background: var(--cream); padding-bottom: 0; }
+.services-header { margin-bottom: 2.5rem; }
+
+/* Bento grid: 2-1-2 */
+.services-bento {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 320px 320px;
+  gap: 14px;
+}
+.bento-service-item--1 { grid-column: 1 / 3; grid-row: 1; }
+.bento-service-item--2 { grid-column: 3;     grid-row: 1 / 3; }
+.bento-service-item--3 { grid-column: 4 / 6; grid-row: 1; }
+.bento-service-item--4 { grid-column: 1 / 3; grid-row: 2; }
+.bento-service-item--5 { grid-column: 4 / 6; grid-row: 2; }
+
+.service-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--sand);
+  cursor: default;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.service-card:hover .service-card-img { transform: scale(1.05); }
+
+.service-card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(transparent 20%, rgba(26,25,23,0.82) 100%);
+}
+
+.service-card-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.25rem;
+  color: #fafaf8;
+  z-index: 2;
+}
+.service-icon { margin-bottom: 8px; opacity: 0.9; }
+.service-card-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.service-card-content p {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* Mobile marquee */
+.services-marquee-container {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+.services-marquee-track {
+  display: flex;
+  gap: 14px;
+  animation: marquee-scroll 28s linear infinite;
+  width: max-content;
+}
+.services-marquee-container:hover .services-marquee-track { animation-play-state: paused; }
+.services-marquee-track .service-card { width: 220px; height: 280px; flex-shrink: 0; }
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Tech Stack Section ───────────────────────────────── */
+.tech-section {
+  position: relative;
+  padding: 96px 0;
+  overflow: hidden;
+}
+.tech-section-bg {
+  position: absolute; inset: 0;
+  background-color: var(--warm-paper);
+  background-image:
+    linear-gradient(var(--sand) 1px, transparent 1px),
+    linear-gradient(90deg, var(--sand) 1px, transparent 1px);
+  background-size: 48px 48px;
+  z-index: 0;
+}
+
+.tech-header { margin-bottom: 2rem; }
+
+/* Logo marquee */
+.tech-marquee-wrapper {
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+.tech-marquee-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: tech-marquee 30s linear infinite;
+}
+.tech-marquee-item {
+  color: var(--stone);
+  display: flex;
+  align-items: center;
+  transition: color var(--transition);
+}
+.tech-marquee-item:hover { color: var(--ink); }
+
+@keyframes tech-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Tech bento grid */
+.tech-bento-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+
+.tech-bento-card {
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.tech-bento-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.tech-bento-card--wide    { grid-column: span 2; }
+.tech-bento-card--normal  { grid-column: span 1; }
+.tech-bento-card--tall    { grid-row: span 2; }
+
+/* Row layout: frontend(2) | languages(1, tall) | backend(1) | devops(2) */
+.tech-bento-card--frontend  { grid-column: 1; grid-row: 1; }
+.tech-bento-card--languages { grid-column: 2; grid-row: 1 / 3; }
+.tech-bento-card--backend   { grid-column: 3; grid-row: 1; }
+.tech-bento-card--ml        { grid-column: 4; grid-row: 1; }
+.tech-bento-card--mobile    { grid-column: 1; grid-row: 2; }
+.tech-bento-card--devops    { grid-column: 3 / 5; grid-row: 2; }
+
+.tech-bento-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--stone);
+  margin-bottom: 1rem;
+}
+
+.tech-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .services-bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 260px);
+  }
+  .bento-service-item--1 { grid-column: 1; grid-row: 1; }
+  .bento-service-item--2 { grid-column: 2; grid-row: 1; }
+  .bento-service-item--3 { grid-column: 1; grid-row: 2; }
+  .bento-service-item--4 { grid-column: 2; grid-row: 2; }
+  .bento-service-item--5 { grid-column: 1 / 3; grid-row: 3; }
+
+  .tech-bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .tech-bento-card--frontend  { grid-column: 1 / 3; grid-row: auto; }
+  .tech-bento-card--languages { grid-column: 1;     grid-row: auto; }
+  .tech-bento-card--backend   { grid-column: 2;     grid-row: auto; }
+  .tech-bento-card--ml        { grid-column: 1;     grid-row: auto; }
+  .tech-bento-card--mobile    { grid-column: 2;     grid-row: auto; }
+  .tech-bento-card--devops    { grid-column: 1 / 3; grid-row: auto; }
+}
+
+@media (max-width: 768px) {
+  .services-section { display: none; }
+  .tech-bento-grid { grid-template-columns: 1fr; }
+  .tech-bento-card--frontend,
+  .tech-bento-card--devops { grid-column: 1; }
+  .tech-bento-card--tall { grid-row: auto; }
+}
