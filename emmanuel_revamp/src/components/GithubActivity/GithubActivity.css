@@ -6,10 +6,6 @@
 .github-bg {
   position: absolute; inset: 0;
   background-color: var(--cream);
-  background-image:
-    linear-gradient(rgba(213,207,195,0.4) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(213,207,195,0.4) 1px, transparent 1px);
-  background-size: 48px 48px;
   z-index: 0;
 }
 .github-sub {

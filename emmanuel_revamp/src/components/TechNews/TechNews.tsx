@@ -47,7 +47,7 @@ const TechNews = () => {
       <div className="section" data-aos="fade-up">
         <span className="section-label">Stay Current</span>
         <h2 className="section-heading">Latest Tech News</h2>
-        <p className="tech-news-sub">Real articles from Dev.to — the developer community.</p>
+        <p className="tech-news-sub">Real articles from Dev.to, the developer community.</p>
       </div>
 
       {loading ? (

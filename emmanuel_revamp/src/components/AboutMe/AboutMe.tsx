@@ -4,7 +4,6 @@ import './AboutMe.css';
 const STATS = [
   { value: '3+', label: 'Years Building' },
   { value: '20+', label: 'Projects Shipped' },
-  { value: '4.86', label: 'GPA (First Class)' },
 ];
 
 const AboutMe = () => {
@@ -48,13 +47,10 @@ const AboutMe = () => {
         {/* Right – bio + stats */}
         <div className="aboutme-right" data-aos="fade-left" data-aos-delay="100">
           <p className="aboutme-text highlight-text">
-            I'm Emmanuel, a Software Engineering student at Lead City University, Ibadan with a First Class grade
-            (4.86/5.0), building at the intersection of full-stack development, AI/ML, and cybersecurity.
+            I'm Emmanuel Jompe, a Software Engineer and AI Specialist building at the intersection of full-stack development, artificial intelligence, and cybersecurity.
           </p>
           <p className="aboutme-text secondary-text">
-            Currently interning at <strong>Nestlé Nigeria PLC</strong> as a Data Analysis Intern, and driven by a passion
-            for turning complex problems into practical, scalable solutions. From civic apps to predictive health intelligence
-            systems — I ship things that matter.
+            I am driven by a passion for turning complex technical challenges into practical, scalable solutions. From developing robust web platforms and civic tech applications to integrating predictive machine learning models, I architect and ship software that creates meaningful impact.
           </p>
 
           <div className="stats-grid" ref={statsRef}>

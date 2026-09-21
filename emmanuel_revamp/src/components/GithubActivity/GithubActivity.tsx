@@ -9,7 +9,7 @@ const GithubActivity = () => (
         <span className="section-label">Open Source</span>
         <h2 className="section-heading">Code Contributions</h2>
         <p className="github-sub">
-          My GitHub activity — one commit at a time.{' '}
+          My GitHub activity, one commit at a time.{' '}
           <a href="https://github.com/mojojompe" target="_blank" rel="noreferrer" className="github-profile-link">
             @mojojompe ↗
           </a>

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { projectsData } from '../../data/projectsData';
-import ScrollStack, { ScrollStackItem } from '../ScrollStack/ScrollStack';
 import './Projects.css';
 
 const CATEGORIES = ['Web', 'Mobile', 'AI', 'ML', 'CLI'] as const;
@@ -33,8 +32,8 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Desktop: asymmetric featured grid */}
-        <div className="projects-grid desktop-only">
+        {/* Unified Responsive Grid */}
+        <div className="projects-grid">
           {filtered.map((project, index) => (
             <div
               key={project.id}
@@ -70,35 +69,6 @@ const Projects = () => {
             </div>
           ))}
           {filtered.length === 0 && <p className="no-projects">No projects in this category yet.</p>}
-        </div>
-
-        {/* Mobile: ScrollStack */}
-        <div className="projects-scroll-stack mobile-only">
-          {filtered.length > 0 && (
-            <ScrollStack itemDistance={120} itemScale={0.03} baseScale={0.88} stackPosition="25%">
-              {filtered.map(project => (
-                <ScrollStackItem key={project.id}>
-                  <div className="scroll-stack-project">
-                    <img src={project.image} alt={project.title} className="scroll-stack-img" loading="lazy" />
-                    <div className="scroll-stack-overlay" />
-                    <div className="scroll-stack-content">
-                      <span className="project-category-pill">{project.category}</span>
-                      <h3>{project.title}</h3>
-                      <div className="project-tech-pills">
-                        {project.tech.slice(0, 3).map(t => <span key={t} className="project-tech-tag">{t}</span>)}
-                      </div>
-                      <div className="project-card-actions">
-                        <Link to={`/project/${project.id}`} className="project-action-btn project-action-btn--primary">Case Study ↗</Link>
-                        {project.link && project.link !== '/' && (
-                          <a href={project.link} target="_blank" rel="noreferrer" className="project-action-btn project-action-btn--secondary">Live ↗</a>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </ScrollStackItem>
-              ))}
-            </ScrollStack>
-          )}
         </div>
       </div>
     </section>

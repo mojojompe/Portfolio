@@ -15,6 +15,7 @@ import Experience from './components/Experience/Experience';
 import TechNews from './components/TechNews/TechNews';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import Chatbot from './components/Chatbot';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 
 import './index.css';
@@ -59,8 +60,8 @@ const HomePage = () => {
         items={NAV_ITEMS}
         baseColor="#fafaf8"
         menuColor="#1a1917"
-        buttonBgColor="#1a1917"
-        buttonTextColor="#fafaf8"
+        buttonBgColor="#d5cfc3"
+        buttonTextColor="#1a1917"
         ctaLabel="Download CV"
         ctaHref="https://drive.google.com/file/d/1wo3hSGebGm-vAe1Jue4WsoawoGf906q5/view"
       />
@@ -76,6 +77,7 @@ const HomePage = () => {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
     </>
   );
 };

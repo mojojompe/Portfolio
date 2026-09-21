@@ -1,5 +1,7 @@
 import './Footer.css';
 
+import { FaGithub, FaLinkedin, FaWhatsapp, FaXTwitter, FaInstagram } from 'react-icons/fa6';
+
 const Footer = () => (
   <footer className="site-footer">
     <div className="footer-inner">
@@ -31,14 +33,14 @@ const Footer = () => (
 
       <div className="footer-socials">
         {[
-          { href: 'https://github.com/mojojompe',                  label: 'GitHub' },
-          { href: 'http://www.linkedin.com/in/emmanuel-jompe',     label: 'LinkedIn' },
-          { href: 'https://wa.me/2348071455374',                   label: 'WhatsApp' },
-          { href: 'https://twitter.com/EmmanuelJompe',             label: 'Twitter' },
-          { href: 'https://www.instagram.com/emmanuel_jompe/',     label: 'Instagram' },
+          { href: 'https://github.com/mojojompe',                  label: 'GitHub', Icon: FaGithub },
+          { href: 'http://www.linkedin.com/in/emmanuel-jompe',     label: 'LinkedIn', Icon: FaLinkedin },
+          { href: 'https://wa.me/2348071455374',                   label: 'WhatsApp', Icon: FaWhatsapp },
+          { href: 'https://twitter.com/EmmanuelJompe',             label: 'Twitter', Icon: FaXTwitter },
+          { href: 'https://www.instagram.com/emmanuel_jompe/',     label: 'Instagram', Icon: FaInstagram },
         ].map(s => (
           <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="footer-social-btn" aria-label={s.label}>
-            {s.label[0]}
+            <s.Icon size={18} />
           </a>
         ))}
       </div>

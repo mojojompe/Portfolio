@@ -7,7 +7,7 @@ const PhotoWall = () => {
       <div className="photo-wall-header" data-aos="fade-up">
         <span className="section-label">Personal</span>
         <h2 className="section-heading">A Glimpse of Me</h2>
-        <p className="photo-wall-sub">Beyond the code — moments that shaped who I am.</p>
+        <p className="photo-wall-sub">Beyond the code, moments that shaped who I am.</p>
       </div>
 
       <div className="photo-wall-canvas">

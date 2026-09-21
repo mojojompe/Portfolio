@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { MdEmail, MdLocationOn } from 'react-icons/md';
 import emailjs from '@emailjs/browser';
 import SpecularButton from '../ui/SpecularButton/SpecularButton';
 import './Contact.css';
@@ -27,16 +28,16 @@ const Contact = () => {
           <span className="section-label">Get In Touch</span>
           <h2 className="contact-heading">Let's Build<br />Something.</h2>
           <p className="contact-lead">
-            A collaboration, a question, or a 6-figure opportunity — I'm always open to meaningful conversations.
+            A collaboration, a question, or a 6-figure opportunity, I'm always open to meaningful conversations.
           </p>
 
           <div className="contact-details">
             <a href="mailto:ayomiposiemmanuel9@gmail.com" className="contact-detail-item">
-              <span className="contact-detail-icon">✉</span>
+              <span className="contact-detail-icon"><MdEmail size={20} /></span>
               <span>ayomiposiemmanuel9@gmail.com</span>
             </a>
             <div className="contact-detail-item">
-              <span className="contact-detail-icon">📍</span>
+              <span className="contact-detail-icon"><MdLocationOn size={20} /></span>
               <span>Ibadan, Nigeria</span>
             </div>
           </div>

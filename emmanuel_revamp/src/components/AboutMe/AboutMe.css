@@ -1,9 +1,5 @@
 .aboutme-section {
   background: var(--warm-paper);
-  background-image:
-    linear-gradient(var(--sand) 1px, transparent 1px),
-    linear-gradient(90deg, var(--sand) 1px, transparent 1px);
-  background-size: 48px 48px;
   padding: 96px 24px;
 }
 
